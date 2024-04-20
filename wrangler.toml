@@ -6,4 +6,3 @@ pages_build_output_dir = "./dist"
 [env.production]
 vars = {  ENVIRONMENT = "production"}
 #route = { pattern = "getlicensed.dev", custom_domain = true}
-logpush = true
