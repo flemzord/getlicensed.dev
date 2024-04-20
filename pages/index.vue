@@ -565,7 +565,7 @@ const tiers = [
     id: "tier-enterprise",
     href: "#",
     priceMonthly: "$48",
-    description: "Dedicated support and infrastructure for UnLicensed.",
+    description: "Dedicated support and infrastructure for getlicensed.",
     features: [
       "Unlimited products",
       "Unlimited subscribers",

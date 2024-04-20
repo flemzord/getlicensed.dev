@@ -11,6 +11,10 @@ on:
 permissions:
   pull-requests: write
 
+concurrency:
+  group: "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}"
+  cancel-in-progress: true
+
 jobs:
   validate-pr:
     name: PR title
@@ -50,3 +54,12 @@ jobs:
           header: pr-title-lint-error
           message: |
             Thank you for following the naming conventions for pull request titles! 🙏
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install
+        uses: ./.github/actions/install
+      - run: pnpm run lint
