@@ -6,6 +6,11 @@ useHead({
     lang: "en",
   },
 });
+
+useSeoMeta({
+  title: "GetLicensed",
+  description: "Nuxt 3 with Vite",
+});
 </script>
 
 <template>
