@@ -37,3 +37,4 @@ runs:
       shell: bash
       run: |
         pnpm install --recursive
+        npm install -g wrangler
