@@ -12,9 +12,8 @@ concurrency:
 
 jobs:
   lint:
-    name: Code
+    name: Lint
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: Install
