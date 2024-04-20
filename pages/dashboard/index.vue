@@ -1,8 +1,8 @@
 <script setup>
-  definePageMeta({
-    middleware: 'auth'
-  })
+definePageMeta({
+  middleware: "auth",
+});
 </script>
 <template>
-  coucou
+  <div>coucou</div>
 </template>

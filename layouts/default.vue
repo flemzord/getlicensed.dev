@@ -1,11 +1,11 @@
 <template>
   <div class="bg-white">
-    <Header />
+    <AppHeader />
 
     <main class="isolate">
       <NuxtPage />
     </main>
 
-    <Footer />
+    <AppFooter />
   </div>
 </template>
