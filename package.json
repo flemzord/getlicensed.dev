@@ -14,7 +14,7 @@
     "lint": "yarn lint:eslint && yarn lint:prettier",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier . --check",
-    "lintfix": "prettier --write --list-different . && eslint . --fix"
+    "lintfix": "prettier --write . && eslint . --fix"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.20",

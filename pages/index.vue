@@ -64,7 +64,7 @@
                 width="2432"
                 height="1442"
                 class="rounded-md shadow-2xl ring-1 ring-gray-900/10"
-              >
+              />
             </div>
           </div>
         </div>
@@ -110,35 +110,35 @@
           alt="Transistor"
           width="158"
           height="48"
-        >
+        />
         <img
           class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
           src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
           alt="Reform"
           width="158"
           height="48"
-        >
+        />
         <img
           class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
           src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
           alt="Tuple"
           width="158"
           height="48"
-        >
+        />
         <img
           class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
           src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
           alt="SavvyCal"
           width="158"
           height="48"
-        >
+        />
         <img
           class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
           src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
           alt="Statamic"
           width="158"
           height="48"
-        >
+        />
       </div>
       <div class="mt-16 flex justify-center">
         <p
@@ -211,7 +211,7 @@
           class="absolute inset-0 h-full w-full object-cover brightness-150 saturate-0"
           src="https://images.unsplash.com/photo-1601381718415-a05fb0a261f3?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8ODl8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1216&q=80"
           alt=""
-        >
+        />
         <div class="absolute inset-0 bg-gray-900/90 mix-blend-multiply" />
         <div
           class="absolute -left-80 -top-56 transform-gpu blur-3xl"
@@ -274,7 +274,7 @@
             class="h-12 w-auto"
             src="https://tailwindui.com/img/logos/workcation-logo-white.svg"
             alt=""
-          >
+          />
           <figure>
             <blockquote
               class="mt-6 text-lg font-semibold text-white sm:text-xl sm:leading-8"
@@ -446,7 +446,7 @@
       </div>
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Boost your productivity.<br >Start using our app today.
+          Boost your productivity.<br />Start using our app today.
         </h2>
         <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
           Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim
