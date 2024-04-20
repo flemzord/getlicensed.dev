@@ -9,7 +9,7 @@
     "generate": "nuxt generate",
     "preview": "npm run build && wrangler pages dev",
     "postinstall": "nuxt prepare",
-    "deploy": "npm run build && wrangler pages deploy",
+    "deploy:production": "npm run build && wrangler pages deploy --env=production",
     "cf-typegen": "wrangler types",
     "lint": "yarn lint:eslint && yarn lint:prettier",
     "lint:eslint": "eslint .",
