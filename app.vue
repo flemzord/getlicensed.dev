@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import {CheckIcon} from "@heroicons/vue/20/solid";
-
 useHead({
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
@@ -16,13 +14,9 @@ useHead({
 </script>
 
 <template>
-  <div class="bg-white">
-    <Header />
+  <NuxtLoadingIndicator />
 
-    <main class="isolate">
-      <NuxtPage />
-    </main>
-
-    <Footer />
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
