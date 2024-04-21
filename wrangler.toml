@@ -2,8 +2,21 @@ name = "getlicensed"
 pages_build_output_dir = "dist"
 compatibility_date = "2024-04-20"
 
+[[ d1_databases ]]
+binding = "DB"
+database_name = "getlicensed-local"
+database_id = "YOUR DB ID"
+preview_database_id = "DB" # Required for Pages local development
+migrations_dir = "./server/database/migrations"
+
 [env.production]
 compatibility_date = "2024-04-19"
 
 [env.production.vars]
 ENVIRONMENT = "production"
+
+[[env.production.d1_databases]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "getlicensed-prod"
+database_id = "fd07a9c1-f405-484b-ad8b-52ea52df4fe0"
+migrations_dir = "./server/database/migrations"

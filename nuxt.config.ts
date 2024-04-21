@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    "nitro-cloudflare-dev",
+    "@nuxthub/core",
     "nuxt-auth-utils",
     "@nuxt/ui",
     "@nuxtjs/tailwindcss",
@@ -21,7 +21,17 @@ export default defineNuxtConfig({
     "/api/*": { cache: { maxAge: 60 } },
   },
 
+  hub: {
+    database: true,
+  },
+
+  ui: {
+    icons: ["heroicons"],
+  },
+
   tailwindcss: {
-    plugins: ["tailwindcss/plugin-forms"],
+    config: {
+      plugins: ["tailwindcss/plugin-forms"],
+    },
   },
 });

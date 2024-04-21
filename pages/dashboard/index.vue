@@ -4,5 +4,5 @@ definePageMeta({
 });
 </script>
 <template>
-  <div>coucou</div>
+  <div class="relative pt-14">coucou</div>
 </template>
