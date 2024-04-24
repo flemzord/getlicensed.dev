@@ -496,82 +496,82 @@
 </template>
 
 <script setup>
+import { CheckIcon } from '@heroicons/vue/20/solid';
 import {
   ArrowPathIcon,
   CloudArrowUpIcon,
   FingerPrintIcon,
   LockClosedIcon,
-} from "@heroicons/vue/24/outline";
-import { CheckIcon } from "@heroicons/vue/20/solid";
+} from '@heroicons/vue/24/outline';
 
 const features = [
   {
-    name: "Push to deploy",
+    name: 'Push to deploy',
     description:
-      "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+      'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
     icon: CloudArrowUpIcon,
   },
   {
-    name: "SSL certificates",
+    name: 'SSL certificates',
     description:
-      "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
+      'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
     icon: LockClosedIcon,
   },
   {
-    name: "Simple queues",
+    name: 'Simple queues',
     description:
-      "Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.",
+      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
     icon: ArrowPathIcon,
   },
   {
-    name: "Advanced security",
+    name: 'Advanced security',
     description:
-      "Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.",
+      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
     icon: FingerPrintIcon,
   },
 ];
 const tiers = [
   {
-    name: "Freelancer",
-    id: "tier-freelancer",
-    href: "#",
-    priceMonthly: "$24",
-    description: "The essentials to provide your best work for clients.",
+    name: 'Freelancer',
+    id: 'tier-freelancer',
+    href: '#',
+    priceMonthly: '$24',
+    description: 'The essentials to provide your best work for clients.',
     features: [
-      "5 products",
-      "Up to 1,000 subscribers",
-      "Basic analytics",
-      "48-hour support response time",
+      '5 products',
+      'Up to 1,000 subscribers',
+      'Basic analytics',
+      '48-hour support response time',
     ],
     mostPopular: false,
   },
   {
-    name: "Startup",
-    id: "tier-startup",
-    href: "#",
-    priceMonthly: "$32",
-    description: "A plan that scales with your rapidly growing business.",
+    name: 'Startup',
+    id: 'tier-startup',
+    href: '#',
+    priceMonthly: '$32',
+    description: 'A plan that scales with your rapidly growing business.',
     features: [
-      "25 products",
-      "Up to 10,000 subscribers",
-      "Advanced analytics",
-      "24-hour support response time",
-      "Marketing automations",
+      '25 products',
+      'Up to 10,000 subscribers',
+      'Advanced analytics',
+      '24-hour support response time',
+      'Marketing automations',
     ],
     mostPopular: true,
   },
   {
-    name: "Enterprise",
-    id: "tier-enterprise",
-    href: "#",
-    priceMonthly: "$48",
-    description: "Dedicated support and infrastructure for getlicensed.",
+    name: 'Enterprise',
+    id: 'tier-enterprise',
+    href: '#',
+    priceMonthly: '$48',
+    description: 'Dedicated support and infrastructure for getlicensed.',
     features: [
-      "Unlimited products",
-      "Unlimited subscribers",
-      "Advanced analytics",
-      "1-hour, dedicated support response time",
-      "Marketing automations",
+      'Unlimited products',
+      'Unlimited subscribers',
+      'Advanced analytics',
+      '1-hour, dedicated support response time',
+      'Marketing automations',
     ],
     mostPopular: false,
   },

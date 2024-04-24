@@ -81,28 +81,28 @@
 <script setup>
 const footerNavigation = {
   solutions: [
-    { name: "Hosting", href: "#" },
-    { name: "Data Services", href: "#" },
-    { name: "Uptime Monitoring", href: "#" },
-    { name: "Enterprise Services", href: "#" },
+    { name: 'Hosting', href: '#' },
+    { name: 'Data Services', href: '#' },
+    { name: 'Uptime Monitoring', href: '#' },
+    { name: 'Enterprise Services', href: '#' },
   ],
   support: [
-    { name: "Pricing", href: "#" },
-    { name: "Documentation", href: "#" },
-    { name: "Guides", href: "#" },
-    { name: "API Reference", href: "#" },
+    { name: 'Pricing', href: '#' },
+    { name: 'Documentation', href: '#' },
+    { name: 'Guides', href: '#' },
+    { name: 'API Reference', href: '#' },
   ],
   company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
-    { name: "Partners", href: "#" },
+    { name: 'About', href: '#' },
+    { name: 'Blog', href: '#' },
+    { name: 'Jobs', href: '#' },
+    { name: 'Press', href: '#' },
+    { name: 'Partners', href: '#' },
   ],
   legal: [
-    { name: "Claim", href: "#" },
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
+    { name: 'Claim', href: '#' },
+    { name: 'Privacy', href: '#' },
+    { name: 'Terms', href: '#' },
   ],
 };
 </script>

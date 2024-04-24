@@ -3,22 +3,21 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   nitro: {
-    preset: "cloudflare-pages",
+    preset: 'cloudflare-pages',
   },
 
   modules: [
-    "@nuxthub/core",
-    "nuxt-auth-utils",
-    "@nuxt/ui",
-    "@nuxtjs/tailwindcss",
-    "@nuxt/eslint",
+    '@nuxthub/core',
+    'nuxt-auth-utils',
+    '@nuxt/ui',
+    '@nuxtjs/tailwindcss',
   ],
 
   routeRules: {
     // Generated at build time for SEO purpose
-    "/": { prerender: true },
+    '/': { prerender: true },
     // Cached for 1 minute
-    "/api/*": { cache: { maxAge: 60 } },
+    '/api/*': { cache: { maxAge: 60 } },
   },
 
   hub: {
@@ -26,12 +25,12 @@ export default defineNuxtConfig({
   },
 
   ui: {
-    icons: ["heroicons"],
+    icons: ['heroicons'],
   },
 
   tailwindcss: {
     config: {
-      plugins: ["tailwindcss/plugin-forms"],
+      plugins: ['tailwindcss/plugin-forms'],
     },
   },
 });

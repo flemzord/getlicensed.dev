@@ -109,15 +109,15 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { Dialog, DialogPanel } from "@headlessui/vue";
-import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
+import { Dialog, DialogPanel } from '@headlessui/vue';
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
+import { ref } from 'vue';
 
 const navigation = [
-  { name: "Product", href: "/" },
-  { name: "Features", href: "/" },
-  { name: "Marketplace", href: "/" },
-  { name: "Company", href: "/" },
+  { name: 'Product', href: '/' },
+  { name: 'Features', href: '/' },
+  { name: 'Marketplace', href: '/' },
+  { name: 'Company', href: '/' },
 ];
 const mobileMenuOpen = ref(false);
 

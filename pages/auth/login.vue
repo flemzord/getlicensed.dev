@@ -1,10 +1,10 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: "auth",
+  layout: 'auth',
 });
 
 useSeoMeta({
-  title: "Login",
+  title: 'Login',
 });
 </script>
 

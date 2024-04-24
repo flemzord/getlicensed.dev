@@ -1,8 +1,10 @@
 <script setup>
 definePageMeta({
-  middleware: "auth",
+  middleware: 'auth',
 });
 </script>
 <template>
-  <div class="relative pt-14">coucou</div>
+  <div class="relative pt-14">
+    coucou
+  </div>
 </template>

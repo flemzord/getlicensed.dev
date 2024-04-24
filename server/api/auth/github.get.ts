@@ -1,4 +1,4 @@
-import { eq } from "drizzle-orm";
+import { eq } from 'drizzle-orm';
 
 async function getUserByEmail(email: string) {
   return useDB()
@@ -41,10 +41,10 @@ export default oauth.githubEventHandler({
     }
 
     await setUserSession(event, { user });
-    return sendRedirect(event, "/dashboard");
+    return sendRedirect(event, '/dashboard');
   },
   onError(event, error) {
-    console.error("Github OAuth error:", error);
-    return sendRedirect(event, "/");
+    console.error('Github OAuth error:', error);
+    return sendRedirect(event, '/');
   },
 });
