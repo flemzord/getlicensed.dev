@@ -11,7 +11,12 @@ export default defineNuxtConfig({
     'nuxt-auth-utils',
     '@nuxt/ui',
     '@nuxtjs/tailwindcss',
+    'nuxt-cloudflare-analytics'
   ],
+
+  cloudflareAnalytics: {
+    token: 'f39782652df14122b6c0f5c7d6f9b438',
+  },
 
   routeRules: {
     // Generated at build time for SEO purpose

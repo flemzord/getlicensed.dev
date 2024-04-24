@@ -19,5 +19,4 @@ useSeoMeta({
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
-  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f39782652df14122b6c0f5c7d6f9b438"}'></script>
 </template>
