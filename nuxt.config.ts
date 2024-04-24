@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     'nuxt-auth-utils',
     '@nuxt/ui',
     '@nuxtjs/tailwindcss',
-    'nuxt-cloudflare-analytics'
+    'nuxt-cloudflare-analytics',
   ],
 
   cloudflareAnalytics: {

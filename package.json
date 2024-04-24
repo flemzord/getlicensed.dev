@@ -11,7 +11,7 @@
     "postinstall": "nuxt prepare",
     "deploy:production": "npm run build && wrangler d1 migrations apply getlicensed-prod --env=production --remote && wrangler pages deploy --env=production",
     "cf-typegen": "wrangler types",
-    "fmt": "pnpm biome format . --write && pnpm biome check .",
+    "fmt": "pnpm biome format . --write && pnpm biome check . --apply",
     "db:generate": "drizzle-kit generate:sqlite",
     "db:up": "drizzle-kit up:sqlite"
   },

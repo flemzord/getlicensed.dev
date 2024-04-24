@@ -36,16 +36,14 @@
             <h1
               class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
             >
-              Deploy to the cloud with confidence
+              Open Source License Management Platform
             </h1>
             <p class="mt-6 text-lg leading-8 text-gray-600">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
+              Take the hassle out of managing licenses for your customers. Quickly integrate GetLicensed's open source license verification APIs and benefit from better security and more satisfied users.
             </p>
             <div class="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="#"
+                href="/dashboard"
                 class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >Get started</a
               >
@@ -54,19 +52,19 @@
               >
             </div>
           </div>
-          <div class="mt-16 flow-root sm:mt-24">
-            <div
-              class="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4"
-            >
-              <img
-                src="https://tailwindui.com/img/component-images/project-app-screenshot.png"
-                alt="App screenshot"
-                width="2432"
-                height="1442"
-                class="rounded-md shadow-2xl ring-1 ring-gray-900/10"
-              />
-            </div>
-          </div>
+<!--          <div class="mt-16 flow-root sm:mt-24">-->
+<!--            <div-->
+<!--              class="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4"-->
+<!--            >-->
+<!--              <img-->
+<!--                src="https://tailwindui.com/img/component-images/project-app-screenshot.png"-->
+<!--                alt="App screenshot"-->
+<!--                width="2432"-->
+<!--                height="1442"-->
+<!--                class="rounded-md shadow-2xl ring-1 ring-gray-900/10"-->
+<!--              />-->
+<!--            </div>-->
+<!--          </div>-->
         </div>
       </div>
       <div
@@ -140,37 +138,35 @@
           height="48"
         />
       </div>
-      <div class="mt-16 flex justify-center">
-        <p
-          class="relative rounded-full px-4 py-1.5 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/10 hover:ring-gray-900/20"
-        >
-          <span class="hidden md:inline"
-            >Transistor saves up to $40,000 per year, per employee by working
-            with us.</span
-          >
-          <a href="#" class="font-semibold text-indigo-600"
-            ><span class="absolute inset-0" aria-hidden="true" /> Read our case
-            study <span aria-hidden="true">&rarr;</span></a
-          >
-        </p>
-      </div>
+<!--      <div class="mt-16 flex justify-center">-->
+<!--        <p-->
+<!--          class="relative rounded-full px-4 py-1.5 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/10 hover:ring-gray-900/20"-->
+<!--        >-->
+<!--          <span class="hidden md:inline"-->
+<!--            >Transistor saves up to $40,000 per year, per employee by working-->
+<!--            with us.</span-->
+<!--          >-->
+<!--          <a href="#" class="font-semibold text-indigo-600"-->
+<!--            ><span class="absolute inset-0" aria-hidden="true" /> Read our case-->
+<!--            study <span aria-hidden="true">&rarr;</span></a-->
+<!--          >-->
+<!--        </p>-->
+<!--      </div>-->
     </div>
 
     <!-- Feature section -->
     <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
       <div class="mx-auto max-w-2xl lg:text-center">
         <h2 class="text-base font-semibold leading-7 text-indigo-600">
-          Deploy faster
+          Manage your License
         </h2>
         <p
           class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
         >
-          Everything you need to deploy your app
+          Everything you need to distribute your app
         </p>
         <p class="mt-6 text-lg leading-8 text-gray-600">
-          Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-          Suspendisse eget egestas a elementum pulvinar et feugiat blandit at.
-          In mi viverra elit nunc.
+          Distributing an application isn't easy. How can you be sure that the license is respected? That only access to the features sold is possible? GetLicensed manages all this for you!
         </p>
       </div>
       <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -203,97 +199,97 @@
     </div>
 
     <!-- Testimonial section -->
-    <div class="mx-auto mt-32 max-w-7xl sm:mt-56 sm:px-6 lg:px-8">
-      <div
-        class="relative overflow-hidden bg-gray-900 px-6 py-20 shadow-xl sm:rounded-3xl sm:px-10 sm:py-24 md:px-12 lg:px-20"
-      >
-        <img
-          class="absolute inset-0 h-full w-full object-cover brightness-150 saturate-0"
-          src="https://images.unsplash.com/photo-1601381718415-a05fb0a261f3?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8ODl8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1216&q=80"
-          alt=""
-        />
-        <div class="absolute inset-0 bg-gray-900/90 mix-blend-multiply" />
-        <div
-          class="absolute -left-80 -top-56 transform-gpu blur-3xl"
-          aria-hidden="true"
-        >
-          <div
-            class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776fff] opacity-[0.45]"
-            style="
-              clip-path: polygon(
-                74.1% 44.1%,
-                100% 61.6%,
-                97.5% 26.9%,
-                85.5% 0.1%,
-                80.7% 2%,
-                72.5% 32.5%,
-                60.2% 62.4%,
-                52.4% 68.1%,
-                47.5% 58.3%,
-                45.2% 34.5%,
-                27.5% 76.7%,
-                0.1% 64.9%,
-                17.9% 100%,
-                27.6% 76.8%,
-                76.1% 97.7%,
-                74.1% 44.1%
-              );
-            "
-          />
-        </div>
-        <div
-          class="hidden md:absolute md:bottom-16 md:left-[50rem] md:block md:transform-gpu md:blur-3xl"
-          aria-hidden="true"
-        >
-          <div
-            class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776fff] opacity-25"
-            style="
-              clip-path: polygon(
-                74.1% 44.1%,
-                100% 61.6%,
-                97.5% 26.9%,
-                85.5% 0.1%,
-                80.7% 2%,
-                72.5% 32.5%,
-                60.2% 62.4%,
-                52.4% 68.1%,
-                47.5% 58.3%,
-                45.2% 34.5%,
-                27.5% 76.7%,
-                0.1% 64.9%,
-                17.9% 100%,
-                27.6% 76.8%,
-                76.1% 97.7%,
-                74.1% 44.1%
-              );
-            "
-          />
-        </div>
-        <div class="relative mx-auto max-w-2xl lg:mx-0">
-          <img
-            class="h-12 w-auto"
-            src="https://tailwindui.com/img/logos/workcation-logo-white.svg"
-            alt=""
-          />
-          <figure>
-            <blockquote
-              class="mt-6 text-lg font-semibold text-white sm:text-xl sm:leading-8"
-            >
-              <p>
-                “Amet amet eget scelerisque tellus sit neque faucibus non
-                eleifend. Integer eu praesent at a. Ornare arcu gravida natoque
-                erat et cursus tortor consequat at. Vulputate gravida sociis
-                enim nullam ultricies habitant malesuada lorem ac.”
-              </p>
-            </blockquote>
-            <figcaption class="mt-6 text-base text-white">
-              <div class="font-semibold">Judith Black</div>
-              <div class="mt-1">CEO of Tuple</div>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
+<!--    <div class="mx-auto mt-32 max-w-7xl sm:mt-56 sm:px-6 lg:px-8">-->
+<!--      <div-->
+<!--        class="relative overflow-hidden bg-gray-900 px-6 py-20 shadow-xl sm:rounded-3xl sm:px-10 sm:py-24 md:px-12 lg:px-20"-->
+<!--      >-->
+<!--        <img-->
+<!--          class="absolute inset-0 h-full w-full object-cover brightness-150 saturate-0"-->
+<!--          src="https://images.unsplash.com/photo-1601381718415-a05fb0a261f3?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8ODl8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1216&q=80"-->
+<!--          alt=""-->
+<!--        />-->
+<!--        <div class="absolute inset-0 bg-gray-900/90 mix-blend-multiply" />-->
+<!--        <div-->
+<!--          class="absolute -left-80 -top-56 transform-gpu blur-3xl"-->
+<!--          aria-hidden="true"-->
+<!--        >-->
+<!--          <div-->
+<!--            class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776fff] opacity-[0.45]"-->
+<!--            style="-->
+<!--              clip-path: polygon(-->
+<!--                74.1% 44.1%,-->
+<!--                100% 61.6%,-->
+<!--                97.5% 26.9%,-->
+<!--                85.5% 0.1%,-->
+<!--                80.7% 2%,-->
+<!--                72.5% 32.5%,-->
+<!--                60.2% 62.4%,-->
+<!--                52.4% 68.1%,-->
+<!--                47.5% 58.3%,-->
+<!--                45.2% 34.5%,-->
+<!--                27.5% 76.7%,-->
+<!--                0.1% 64.9%,-->
+<!--                17.9% 100%,-->
+<!--                27.6% 76.8%,-->
+<!--                76.1% 97.7%,-->
+<!--                74.1% 44.1%-->
+<!--              );-->
+<!--            "-->
+<!--          />-->
+<!--        </div>-->
+<!--        <div-->
+<!--          class="hidden md:absolute md:bottom-16 md:left-[50rem] md:block md:transform-gpu md:blur-3xl"-->
+<!--          aria-hidden="true"-->
+<!--        >-->
+<!--          <div-->
+<!--            class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776fff] opacity-25"-->
+<!--            style="-->
+<!--              clip-path: polygon(-->
+<!--                74.1% 44.1%,-->
+<!--                100% 61.6%,-->
+<!--                97.5% 26.9%,-->
+<!--                85.5% 0.1%,-->
+<!--                80.7% 2%,-->
+<!--                72.5% 32.5%,-->
+<!--                60.2% 62.4%,-->
+<!--                52.4% 68.1%,-->
+<!--                47.5% 58.3%,-->
+<!--                45.2% 34.5%,-->
+<!--                27.5% 76.7%,-->
+<!--                0.1% 64.9%,-->
+<!--                17.9% 100%,-->
+<!--                27.6% 76.8%,-->
+<!--                76.1% 97.7%,-->
+<!--                74.1% 44.1%-->
+<!--              );-->
+<!--            "-->
+<!--          />-->
+<!--        </div>-->
+<!--        <div class="relative mx-auto max-w-2xl lg:mx-0">-->
+<!--          <img-->
+<!--            class="h-12 w-auto"-->
+<!--            src="https://tailwindui.com/img/logos/workcation-logo-white.svg"-->
+<!--            alt=""-->
+<!--          />-->
+<!--          <figure>-->
+<!--            <blockquote-->
+<!--              class="mt-6 text-lg font-semibold text-white sm:text-xl sm:leading-8"-->
+<!--            >-->
+<!--              <p>-->
+<!--                “Amet amet eget scelerisque tellus sit neque faucibus non-->
+<!--                eleifend. Integer eu praesent at a. Ornare arcu gravida natoque-->
+<!--                erat et cursus tortor consequat at. Vulputate gravida sociis-->
+<!--                enim nullam ultricies habitant malesuada lorem ac.”-->
+<!--              </p>-->
+<!--            </blockquote>-->
+<!--            <figcaption class="mt-6 text-base text-white">-->
+<!--              <div class="font-semibold">Judith Black</div>-->
+<!--              <div class="mt-1">CEO of Tuple</div>-->
+<!--            </figcaption>-->
+<!--          </figure>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
 
     <!-- Pricing section -->
     <div class="py-24 sm:pt-48">
@@ -305,14 +301,13 @@
           <p
             class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl"
           >
-            Pricing plans for teams of&nbsp;all&nbsp;sizes
+            Pricing plans of&nbsp;all&nbsp;sizes
           </p>
         </div>
         <p
           class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600"
         >
-          Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et
-          quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.
+          Designed for every stage of your journey. Get started today.
         </p>
         <div
           class="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
@@ -390,29 +385,29 @@
     </div>
 
     <!-- FAQs -->
-    <div
-      class="mx-auto max-w-2xl divide-y divide-gray-900/10 px-6 pb-8 sm:pb-24 sm:pt-12 lg:max-w-7xl lg:px-8 lg:pb-32"
-    >
-      <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">
-        Frequently asked questions
-      </h2>
-      <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">
-        <div
-          v-for="faq in faqs"
-          :key="faq.id"
-          class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8"
-        >
-          <dt
-            class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5"
-          >
-            {{ faq.question }}
-          </dt>
-          <dd class="mt-4 lg:col-span-7 lg:mt-0">
-            <p class="text-base leading-7 text-gray-600">{{ faq.answer }}</p>
-          </dd>
-        </div>
-      </dl>
-    </div>
+<!--    <div-->
+<!--      class="mx-auto max-w-2xl divide-y divide-gray-900/10 px-6 pb-8 sm:pb-24 sm:pt-12 lg:max-w-7xl lg:px-8 lg:pb-32"-->
+<!--    >-->
+<!--      <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">-->
+<!--        Frequently asked questions-->
+<!--      </h2>-->
+<!--      <dl class="mt-10 space-y-8 divide-y divide-gray-900/10">-->
+<!--        <div-->
+<!--          v-for="faq in faqs"-->
+<!--          :key="faq.id"-->
+<!--          class="pt-8 lg:grid lg:grid-cols-12 lg:gap-8"-->
+<!--        >-->
+<!--          <dt-->
+<!--            class="text-base font-semibold leading-7 text-gray-900 lg:col-span-5"-->
+<!--          >-->
+<!--            {{ faq.question }}-->
+<!--          </dt>-->
+<!--          <dd class="mt-4 lg:col-span-7 lg:mt-0">-->
+<!--            <p class="text-base leading-7 text-gray-600">{{ faq.answer }}</p>-->
+<!--          </dd>-->
+<!--        </div>-->
+<!--      </dl>-->
+<!--    </div>-->
 
     <!-- CTA section -->
     <div class="relative -z-10 mt-32 px-6 lg:px-8">
@@ -448,19 +443,19 @@
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Boost your productivity.<br />Start using our app today.
         </h2>
-        <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
-          Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim
-          id veniam aliqua proident excepteur commodo do ea.
-        </p>
+<!--        <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">-->
+<!--          Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim-->
+<!--          id veniam aliqua proident excepteur commodo do ea.-->
+<!--        </p>-->
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <a
             href="#"
             class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >Get started</a
           >
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-            >Learn more <span aria-hidden="true">→</span></a
-          >
+<!--          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"-->
+<!--            >Learn more <span aria-hidden="true">→</span></a-->
+<!--          >-->
         </div>
       </div>
       <div
@@ -498,65 +493,64 @@
 <script setup>
 import { CheckIcon } from '@heroicons/vue/20/solid';
 import {
-  ArrowPathIcon,
   CloudArrowUpIcon,
+  CreditCardIcon,
   FingerPrintIcon,
-  LockClosedIcon,
+  LockOpenIcon,
 } from '@heroicons/vue/24/outline';
 
 const features = [
   {
-    name: 'Push to deploy',
+    name: 'Open-source',
     description:
-      'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
+      'We believe strongly in the value of open source: our codebase and development process is available to learn from and contribute to.',
+    icon: LockOpenIcon,
+  },
+  {
+    name: 'Easy Integration',
+    description:
+      'Our JSON REST API and integrations makes it easy to check a license from your Application',
+    icon: CreditCardIcon,
+  },
+  {
+    name: 'Make Your Subscribers Happy',
+    description:
+      'Give your users a first-class experience with quick and easy license verification',
     icon: CloudArrowUpIcon,
-  },
-  {
-    name: 'SSL certificates',
-    description:
-      'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Simple queues',
-    description:
-      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
-    icon: ArrowPathIcon,
   },
   {
     name: 'Advanced security',
     description:
-      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
+      'Hook0 does not lock your data nor your software. You can subscribe to the SaaS version or host the solution yourself!',
     icon: FingerPrintIcon,
   },
 ];
 const tiers = [
   {
-    name: 'Freelancer',
-    id: 'tier-freelancer',
+    name: 'Free Plan',
+    id: 'tier-freeplan',
     href: '#',
-    priceMonthly: '$24',
-    description: 'The essentials to provide your best work for clients.',
+    priceMonthly: '€0',
+    description: 'For small teams and individuals with basic needs.',
     features: [
-      '5 products',
-      'Up to 1,000 subscribers',
+      '1 license',
       'Basic analytics',
-      '48-hour support response time',
+      'Best effort support response time',
+      'No credit card required',
     ],
     mostPopular: false,
   },
   {
-    name: 'Startup',
-    id: 'tier-startup',
+    name: 'Early Adopters',
+    id: 'tier-earlyplan',
     href: '#',
-    priceMonthly: '$32',
-    description: 'A plan that scales with your rapidly growing business.',
+    priceMonthly: '€30',
+    description:
+      'For fast-growing companies that aim to scale across multiple teams.',
     features: [
-      '25 products',
-      'Up to 10,000 subscribers',
-      'Advanced analytics',
-      '24-hour support response time',
-      'Marketing automations',
+      'Unlimited license',
+      'Basic analytics',
+      '48-hour support response time',
     ],
     mostPopular: true,
   },
@@ -564,14 +558,13 @@ const tiers = [
     name: 'Enterprise',
     id: 'tier-enterprise',
     href: '#',
-    priceMonthly: '$48',
-    description: 'Dedicated support and infrastructure for getlicensed.',
+    priceMonthly: '€No',
+    description:
+      'For large organizations that need extra flexibility and control.',
     features: [
-      'Unlimited products',
-      'Unlimited subscribers',
+      'Unlimited license',
       'Advanced analytics',
-      '1-hour, dedicated support response time',
-      'Marketing automations',
+      '10-hour support response time',
     ],
     mostPopular: false,
   },
