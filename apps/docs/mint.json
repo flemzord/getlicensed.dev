@@ -12,6 +12,23 @@
     "light": "#55D799",
     "dark": "#117866"
   },
+  "feedback": {
+    "raiseIssue": true,
+    "suggestEdit": true,
+    "thumbsRating": true
+  },
+  "anchors": [
+    {
+      "name": "Issues",
+      "icon": "envelope",
+      "url": "https://github.com/flemzord/getlicensed/issues/new"
+    },
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/flemzord/getlicensed"
+    }
+  ],
   "topbarLinks": [
     {
       "name": "Support",
@@ -26,8 +43,12 @@
     {
       "group": "Get Started",
       "pages": [
-        "introduction"
+        "overview"
       ]
     }
-  ]
+  ],
+  "footerSocials": {
+    "twitter": "https://twitter.com/getlicensed",
+    "github": "https://github.com/flemzord/getlicensed"
+  }
 }
