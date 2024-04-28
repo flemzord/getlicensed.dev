@@ -1,12 +1,9 @@
-import { drizzle } from 'drizzle-orm/neon-http/driver';
-import { migrate } from 'drizzle-orm/neon-http/migrator';
-import { queryClient } from '~/server/database/db';
+import { dbMigrate } from '~/server/database/db';
 
 export const runMigrate = async () => {
   console.log('Running database migrations...');
 
-  const db = drizzle(queryClient);
-  await migrate(db, { migrationsFolder: 'server/database/migrations' })
+  await dbMigrate()
     .then(() => {
       console.log('Database migrations done');
     })

@@ -41,6 +41,7 @@
     "dotenv": "^16.4.5",
     "drizzle-kit": "^0.20.17",
     "nitro-cloudflare-dev": "^0.1.4",
+    "pg": "^8.11.5",
     "ts-node": "^10.9.2",
     "tsx": "^4.7.2",
     "typescript": "^5.4.5",

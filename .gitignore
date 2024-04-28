@@ -38,3 +38,28 @@ yarn-error.log*
 *.pem
 
 .data
+
+# Nuxt dev/build outputs
+.output
+.nuxt
+.nitro
+.cache
+
+
+# Logs
+logs
+*.log
+
+# Misc
+.fleet
+.idea
+
+# Local env files
+.env.*
+!.env.example
+
+# wrangler files
+.wrangler
+.dev.vars
+
+public/_ca
