@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'cloudflare-pages',
     rollupConfig: {
-      external: ['cloudflare:sockets'],
+      external: ['cloudflare:sockets', 'pg-native'],
     },
     esbuild: {
       options: {
