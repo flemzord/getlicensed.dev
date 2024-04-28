@@ -1,0 +1,40 @@
+name: Main
+on:
+  workflow_call:
+  push:
+    branches: [main]
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install
+        uses: ./.github/actions/install
+      - run: pnpm biome ci .
+
+  production:
+    name: Deploy to Production for Web
+    needs:
+      - lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install
+        uses: ./.github/actions/install
+      - name: Migrate Database
+        run: pnpm run -C ./apps/web db:migrate
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      - name: Build
+        run: pnpm turbo run build --filter='./apps/web'
+      - name: Deploy
+        run: wrangler pages deploy --env=production
+        working-directory: apps/web
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

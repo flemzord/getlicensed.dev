@@ -1,0 +1,41 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.7.1/schema.json",
+  "files": {
+    "ignore": [".nuxt/*", "dist/*", "worker-configuration.d.ts", "public/*"]
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "recommended": false
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "warn"
+      },
+      "suspicious": {
+        "noExplicitAny": "off"
+      }
+    },
+    "ignore": ["src/vendor/**/*", "bower_components/**/*"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "ignore": [
+      "node_modules/*",
+      "*.config.*",
+      "*.json",
+      "tsconfig.json",
+      ".turbo"
+    ]
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single"
+    }
+  }
+}
