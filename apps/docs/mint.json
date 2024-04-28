@@ -1,0 +1,54 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "GetLicensed",
+  "logo": {
+    "light": "/logo/logo.png",
+    "dark": "/logo/logo.png",
+    "href": "https://GetLicensed.dev"
+  },
+  "favicon": "/logo/logo.png",
+  "colors": {
+    "primary": "#2AB673",
+    "light": "#55D799",
+    "dark": "#117866"
+  },
+  "feedback": {
+    "raiseIssue": true,
+    "suggestEdit": true,
+    "thumbsRating": true
+  },
+  "anchors": [
+    {
+      "name": "Issues",
+      "icon": "envelope",
+      "url": "https://github.com/flemzord/getlicensed/issues/new"
+    },
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/flemzord/getlicensed"
+    }
+  ],
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:hello@getlicensed.dev"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Dashboard",
+    "url": "https://getlicensed.dev/dashboard"
+  },
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": [
+        "overview"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "twitter": "https://twitter.com/getlicensed",
+    "github": "https://github.com/flemzord/getlicensed"
+  }
+}
