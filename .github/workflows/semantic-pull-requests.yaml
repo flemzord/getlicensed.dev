@@ -54,12 +54,3 @@ jobs:
           header: pr-title-lint-error
           message: |
             Thank you for following the naming conventions for pull request titles! 🙏
-
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install
-        uses: ./.github/actions/install
-      - run: pnpm biome ci .
