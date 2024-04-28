@@ -29,7 +29,7 @@ jobs:
       - name: Install
         uses: ./.github/actions/install
       - name: Migrate Database
-        run: pnpm run -C ./apps/web db:migrate
+        run: pnpm run db:migrate
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
       - name: Build

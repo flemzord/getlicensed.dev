@@ -3,12 +3,13 @@
   "private": true,
   "license": "AGPL-3.0",
   "version": "0.0.0",
-  "workspaces": ["apps/*", "packages/*"],
+  "workspaces": ["apps/*", "packages/*", "internal/*"],
   "author": "Maxence Maireaux",
   "scripts": {
     "prepare": "husky",
     "build": "dotenv -e .env -- turbo build",
-    "dev": "dotenv -e .env -- turbo dev",
+    "dev": "dotenv -e .env -- pnpm run db:migrate && dotenv -e .env -- turbo dev",
+    "db:migrate": "dotenv -e .env -- turbo db:migrate --filter './internal/db'",
     "fmt": "biome format . --write && biome check . --apply",
     "bump-versions": "pnpm changeset version && pnpm install"
   },

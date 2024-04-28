@@ -1,10 +1,11 @@
+import { schema } from '@getlicensed/db';
 import { eq } from 'drizzle-orm';
 
 async function getUserByEmail(email: string) {
   return useDB()
     .select()
-    .from(tables.users)
-    .where(eq(tables.users.email, email))
+    .from(schema.users)
+    .where(eq(schema.users.email, email))
     .limit(1);
 }
 
@@ -14,7 +15,7 @@ async function createUser(param: {
   email: string;
 }) {
   return useDB()
-    .insert(tables.users)
+    .insert(schema.users)
     .values({
       name: param.name,
       email: param.email,
