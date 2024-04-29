@@ -75,8 +75,8 @@ const { $client } = useNuxtApp();
 const { data: tokens } = await $client.tokens.all.useQuery();
 
 async function deleteToken(id) {
-  console.log('deleteToken', id)
+  console.log('deleteToken', id);
   await $client.tokens.delete.mutate({ id });
-  await refreshNuxtData()
+  await refreshNuxtData();
 }
 </script>

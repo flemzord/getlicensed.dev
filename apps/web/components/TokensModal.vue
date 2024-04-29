@@ -63,6 +63,6 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
   await $client.tokens.add.mutate(event.data);
   ticketsModalOpen.value = false;
-  await refreshNuxtData()
+  await refreshNuxtData();
 }
 </script>
