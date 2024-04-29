@@ -69,6 +69,7 @@
 
 <script setup>
 import { ChevronDownIcon } from '@heroicons/vue/20/solid';
+const toast = useToast();
 
 const { $client } = useNuxtApp();
 
@@ -77,6 +78,7 @@ const { data: tokens } = await $client.tokens.all.useQuery();
 async function deleteToken(id) {
   console.log('deleteToken', id);
   await $client.tokens.delete.mutate({ id });
+  toast.add({ title: 'License deleted', timeout: 5000, color: 'red' });
   await refreshNuxtData();
 }
 </script>

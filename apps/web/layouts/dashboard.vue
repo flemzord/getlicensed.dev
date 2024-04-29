@@ -100,6 +100,8 @@
     <main class="isolate">
       <NuxtPage />
     </main>
+
+    <UNotifications />
   </div>
 </template>
 

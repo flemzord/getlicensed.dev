@@ -36,17 +36,14 @@ export default defineNuxtConfig({
     '/': { prerender: true },
     // Cached for 1 minute
     '/api/*': { cache: { maxAge: 60 } },
-    // Not indexed by search engines
-    '/dashboard/*': { robots: false },
-    '/dashboard': { robots: false },
-  },
-
-  hub: {
-    database: true,
   },
 
   ui: {
     icons: ['heroicons'],
+  },
+
+  hub: {
+    database: true,
   },
 
   tailwindcss: {

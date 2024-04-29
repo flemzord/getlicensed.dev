@@ -33,6 +33,7 @@
 </template>
 
 <script setup lang="ts">
+const toast = useToast();
 const ticketsModalOpen = ref(false);
 
 defineShortcuts({
@@ -49,7 +50,7 @@ import { z } from 'zod';
 import type { FormSubmitEvent } from '#ui/types';
 
 const schema = z.object({
-  name: z.string().min(3, 'Must be at least 2 characters'),
+  name: z.string().min(3, 'Must be at least 3 characters'),
 });
 
 type Schema = z.output<typeof schema>;
@@ -64,6 +65,11 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
   const add = await $client.tokens.add.mutate(event.data);
   console.log('add', add[0].token);
   ticketsModalOpen.value = false;
+  toast.add({
+    title: 'License created',
+    description: add[0].token,
+    timeout: 50000,
+  });
   await refreshNuxtData();
 }
 </script>
