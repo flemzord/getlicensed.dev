@@ -76,7 +76,7 @@ importers:
         version: 0.30.9(@cloudflare/workers-types@4.20240423.0)
       h3-zod:
         specifier: ^0.5.3
-        version: 0.5.3(h3@1.11.1)(zod@3.23.4)
+        version: 0.5.3(h3@1.11.1)(zod@3.23.5)
       nuxt:
         specifier: ^3.11.2
         version: 3.11.2(@types/node@20.12.7)(@unocss/reset@0.59.4)(drizzle-orm@0.30.9)(floating-vue@5.2.2)(typescript@5.4.5)(unocss@0.59.4)(vite@5.2.10)
@@ -99,8 +99,8 @@ importers:
         specifier: ^4.3.0
         version: 4.3.2(vue@3.4.25)
       zod:
-        specifier: ^3.23.4
-        version: 3.23.4
+        specifier: ^3.23.5
+        version: 3.23.5
     devDependencies:
       '@cloudflare/workers-types':
         specifier: ^4.20240419.0
@@ -2093,14 +2093,14 @@ packages:
     engines: {node: '>=18.14.1'}
     dev: true
 
-  /@hono/zod-validator@0.2.1(hono@4.2.8)(zod@3.23.4):
+  /@hono/zod-validator@0.2.1(hono@4.2.8)(zod@3.23.5):
     resolution: {integrity: sha512-HFoxln7Q6JsE64qz2WBS28SD33UB2alp3aRKmcWnNLDzEL1BLsWfbdX6e1HIiUprHYTIXf5y7ax8eYidKUwyaA==}
     peerDependencies:
       hono: '>=3.9.0'
       zod: ^3.19.1
     dependencies:
       hono: 4.2.8
-      zod: 3.23.4
+      zod: 3.23.5
     dev: true
 
   /@iconify-json/carbon@1.1.32:
@@ -2723,8 +2723,8 @@ packages:
       lcm: 0.0.3
       lodash: 4.17.21
       openapi-types: 12.1.3
-      zod: 3.23.4
-      zod-to-json-schema: 3.23.0(zod@3.23.4)
+      zod: 3.23.5
+      zod-to-json-schema: 3.23.0(zod@3.23.5)
     transitivePeerDependencies:
       - debug
     dev: true
@@ -3229,7 +3229,7 @@ packages:
       ufo: 1.5.3
       uncrypto: 0.1.3
       unstorage: 1.10.2(ioredis@5.4.1)
-      zod: 3.23.4
+      zod: 3.23.5
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -6808,7 +6808,7 @@ packages:
     dependencies:
       '@esbuild-kit/esm-loader': 2.6.5
       '@hono/node-server': 1.11.1
-      '@hono/zod-validator': 0.2.1(hono@4.2.8)(zod@3.23.4)
+      '@hono/zod-validator': 0.2.1(hono@4.2.8)(zod@3.23.5)
       camelcase: 7.0.1
       chalk: 5.3.0
       commander: 9.5.0
@@ -6822,7 +6822,7 @@ packages:
       minimatch: 7.4.6
       semver: 7.5.4
       superjson: 2.2.1
-      zod: 3.23.4
+      zod: 3.23.5
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -8260,14 +8260,14 @@ packages:
       h3: 1.11.1
     dev: false
 
-  /h3-zod@0.5.3(h3@1.11.1)(zod@3.23.4):
+  /h3-zod@0.5.3(h3@1.11.1)(zod@3.23.5):
     resolution: {integrity: sha512-wqlRd/d5d9sNYxmNglnL63J4v5HiZZrcXdLIiU2cBsy5gTwxrSH1AqtNrVkuUleshgNOAQldbuO06phdUIxuKA==}
     peerDependencies:
       h3: ^1.6.0
       zod: ^3.21.0
     dependencies:
       h3: 1.11.1
-      zod: 3.23.4
+      zod: 3.23.5
     dev: false
 
   /h3@1.11.1:
@@ -10461,7 +10461,7 @@ packages:
       workerd: 1.20240419.0
       ws: 8.17.0
       youch: 3.3.3
-      zod: 3.23.4
+      zod: 3.23.5
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -15199,16 +15199,16 @@ packages:
       readable-stream: 4.5.2
     dev: false
 
-  /zod-to-json-schema@3.23.0(zod@3.23.4):
+  /zod-to-json-schema@3.23.0(zod@3.23.5):
     resolution: {integrity: sha512-az0uJ243PxsRIa2x1WmNE/pnuA05gUq/JB8Lwe1EDCCL/Fz9MgjYQ0fPlyc2Tcv6aF2ZA7WM5TWaRZVEFaAIag==}
     peerDependencies:
       zod: ^3.23.3
     dependencies:
-      zod: 3.23.4
+      zod: 3.23.5
     dev: true
 
-  /zod@3.23.4:
-    resolution: {integrity: sha512-/AtWOKbBgjzEYYQRNfoGKHObgfAZag6qUJX1VbHo2PRBgS+wfWagEY2mizjfyAPcGesrJOcx/wcl0L9WnVrHFw==}
+  /zod@3.23.5:
+    resolution: {integrity: sha512-fkwiq0VIQTksNNA131rDOsVJcns0pfVUjHzLrNBiF/O/Xxb5lQyEXkhZWcJ7npWsYlvs+h0jFWXXy4X46Em1JA==}
 
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
