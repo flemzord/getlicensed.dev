@@ -52,9 +52,9 @@
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ token.createdAt }}</td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ token.updatedAt }}</td>
                     <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm sm:pr-0">
-                      <a href="#" class="text-indigo-600 hover:text-indigo-900"
-                      >Edit<span class="sr-only">, {{ token.id }}</span></a
-                      >
+                      <UButton @click="deleteToken(token.id)" class="bg-red-600 hover:bg-red-500">
+                        Delete
+                      </UButton>
                     </td>
                   </tr>
                 </tbody>
@@ -73,4 +73,10 @@ import { ChevronDownIcon } from '@heroicons/vue/20/solid';
 const { $client } = useNuxtApp();
 
 const { data: tokens } = await $client.tokens.all.useQuery();
+
+async function deleteToken(id) {
+  console.log('deleteToken', id)
+  await $client.tokens.delete.mutate({ id });
+  await refreshNuxtData()
+}
 </script>

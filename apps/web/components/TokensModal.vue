@@ -22,7 +22,7 @@
               <UInput v-model="state.name" />
             </UFormGroup>
 
-            <UButton type="submit" class="bg-indigo-600">
+            <UButton type="submit" class="bg-indigo-600 hover:bg-indigo-900">
               Submit
             </UButton>
           </UForm>
@@ -63,5 +63,6 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
   await $client.tokens.add.mutate(event.data);
   ticketsModalOpen.value = false;
+  await refreshNuxtData()
 }
 </script>
