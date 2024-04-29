@@ -22,15 +22,11 @@
               <UInput v-model="state.name" />
             </UFormGroup>
 
-            <UButton type="submit">
+            <UButton type="submit" class="bg-indigo-600">
               Submit
             </UButton>
           </UForm>
         </template>
-
-<!--        <template #footer>-->
-<!--          <Placeholder class="h-8" />-->
-<!--        </template>-->
       </UCard>
     </UModal>
   </div>
