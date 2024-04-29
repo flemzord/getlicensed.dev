@@ -61,7 +61,8 @@ const state = reactive({
 async function onSubmit(event: FormSubmitEvent<Schema>) {
   const { $client } = useNuxtApp();
 
-  await $client.tokens.add.mutate(event.data);
+  const add = await $client.tokens.add.mutate(event.data);
+  console.log('add', add[0].token);
   ticketsModalOpen.value = false;
   await refreshNuxtData();
 }

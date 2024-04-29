@@ -21,11 +21,14 @@ export const tokensRouter = t.router({
       .orderBy(desc(schema.tokens.createdAt));
   }),
   add: protectedProcedure.input(AddShape).mutation(({ input, ctx }) => {
-    return useDB().insert(schema.tokens).values({
-      name: input.name,
-      userId: ctx.userId,
-      token: generateRandomString(),
-    });
+    return useDB()
+      .insert(schema.tokens)
+      .values({
+        name: input.name,
+        userId: ctx.userId,
+        token: generateRandomString(),
+      })
+      .returning();
   }),
   delete: protectedProcedure.input(DeleteShape).mutation(({ input, ctx }) => {
     return useDB()
