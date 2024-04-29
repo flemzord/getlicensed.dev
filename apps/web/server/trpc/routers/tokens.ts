@@ -1,8 +1,8 @@
 import { schema } from '@getlicensed/db';
 import { and, desc, eq } from 'drizzle-orm';
-import { generateRandomString } from 'ts-randomstring/lib';
 import { z } from 'zod';
 import { protectedProcedure, t } from '~/server/trpc/trpc';
+import { generateLicenseKey } from '~/server/utils/license';
 
 const AddShape = z.object({
   name: z.string(),
@@ -26,7 +26,7 @@ export const tokensRouter = t.router({
       .values({
         name: input.name,
         userId: ctx.userId,
-        token: generateRandomString(),
+        token: generateLicenseKey,
       })
       .returning();
   }),
