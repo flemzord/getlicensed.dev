@@ -2,10 +2,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  site: {
+    url: 'https://getlicensed.dev',
+  },
+
   nitro: {
     preset: 'cloudflare-pages',
     rollupConfig: {
-      external: ['cloudflare:sockets', 'pg-native'],
+      external: ['cloudflare:sockets', 'pg-native', '@prisma/client'],
     },
     esbuild: {
       options: {
