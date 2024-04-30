@@ -1,9 +1,17 @@
 import { schema } from '@getlicensed/db';
 import { eq } from 'drizzle-orm';
+import { zh } from 'h3-zod';
+import { z } from 'zod';
 
 export default defineEventHandler(async (event) => {
-  const query = getQuery(event);
-  if (query.license === undefined) {
+  const body = await zh.useSafeValidatedBody(
+    event,
+    z.object({
+      license: z.string(),
+    }),
+  );
+
+  if (!body.success) {
     throw createError({
       statusCode: 400,
       statusMessage: 'No license provided',
@@ -18,7 +26,7 @@ export default defineEventHandler(async (event) => {
       updatedAt: schema.tokens.updatedAt,
     })
     .from(schema.tokens)
-    .where(eq(schema.tokens.token, query.license as string))
+    .where(eq(schema.tokens.token, body.data.license))
     .limit(1)
     .execute();
 
