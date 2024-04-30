@@ -8,21 +8,25 @@
   "author": "Maxence Maireaux",
   "license": "AGPL-3.0",
   "scripts": {
-    "studio": "dotenv -e .env drizzle-kit studio ",
-    "db:generate": "drizzle-kit generate:pg",
-    "db:migrate": "tsx src/migrate.ts"
+    "build": "prisma generate",
+    "format": "prisma format",
+    "clean": "rimraf node_modules",
+    "post-install": "prisma generate",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate-dev": "prisma migrate dev --skip-seed",
+    "db:migrate": "prisma migrate deploy",
+    "prisma:seed": "prisma db seed",
+    "prisma:studio": "prisma studio"
   },
   "devDependencies": {
     "@types/node": "^20.12.7",
-    "dotenv-cli": "^7.4.1",
-    "drizzle-kit": "^0.20.17",
-    "drizzle-orm": "^0.30.9",
-    "pg": "^8.11.5",
-    "ts-node": "^10.9.2",
-    "tsx": "^4.8.2",
-    "typescript": "^5.4.5"
+    "@types/ws": "^8.5.10",
+    "prisma": "^5.13.0"
   },
   "dependencies": {
-    "@neondatabase/serverless": "^0.9.1"
+    "@neondatabase/serverless": "^0.9.1",
+    "@prisma/adapter-neon": "^5.13.0",
+    "@prisma/client": "5.13.0",
+    "ws": "^8.17.0"
   }
 }

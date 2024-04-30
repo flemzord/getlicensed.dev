@@ -4,11 +4,11 @@
       <div class="px-4 sm:px-6 lg:px-8">
         <div class="sm:flex sm:items-center">
           <div class="sm:flex-auto">
-            <h1 class="text-base font-semibold leading-6 text-gray-900">Licenses</h1>
-            <p class="mt-2 text-sm text-gray-700">You can create, modify or delete a license.</p>
+            <h1 class="text-base font-semibold leading-6 text-gray-900">Articles</h1>
+            <p class="mt-2 text-sm text-gray-700">You can create, modify or delete a article.</p>
           </div>
           <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-            <TokensModal />
+            <ArticlesModal />
           </div>
         </div>
         <div class="mt-8 flow-root">
@@ -47,16 +47,16 @@
                 </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200 bg-white">
-                  <tr v-for="token of tokens" :key="token.id">
-                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">{{ token.name }}</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ token.createdAt }}</td>
-                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ token.updatedAt }}</td>
-                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm sm:pr-0">
-                      <UButton @click="deleteToken(token.id)" class="bg-red-600 hover:bg-red-500">
-                        Delete
-                      </UButton>
-                    </td>
-                  </tr>
+                <tr v-for="article of articles" :key="article.id">
+                  <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">{{ article.name }}</td>
+                  <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ article.createdAt }}</td>
+                  <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ article.updatedAt }}</td>
+                  <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm sm:pr-0">
+                    <!--                      <UButton @click="deletearticle(article.id)" class="bg-red-600 hover:bg-red-500">-->
+                    <!--                        Delete-->
+                    <!--                      </UButton>-->
+                  </td>
+                </tr>
                 </tbody>
               </table>
             </div>
@@ -73,11 +73,5 @@ const toast = useToast();
 
 const { $client } = useNuxtApp();
 
-const { data: tokens } = await $client.licenses.all.useQuery();
-
-async function deleteToken(id) {
-  await $client.licenses.delete.mutate({ id });
-  toast.add({ title: 'License deleted', timeout: 5000, color: 'red' });
-  await refreshNuxtData();
-}
+const { data: articles } = await $client.articles.all.useQuery();
 </script>

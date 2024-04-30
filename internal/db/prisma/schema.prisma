@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  email     String    @unique
+  name      String?
+  githubId  Int?      @unique
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now())
+  License   License[]
+}
+
+model License {
+  id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user       User     @relation(fields: [userId], references: [id])
+  userId     String   @db.Uuid
+  token      String
+  name       String
+  metadata   Json     @default("{}")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @default(now())
+  article    Article  @relation(fields: [articleId], references: [id])
+  articleId  String   @db.Uuid
+  customer   Customer @relation(fields: [customerId], references: [id])
+  customerId String   @db.Uuid
+}
+
+model Article {
+  id        String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name      String
+  userId    String    @db.Uuid
+  metadata  Json      @default("{}")
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now())
+  License   License[]
+}
+
+model Customer {
+  id        String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name      String
+  userId    String    @db.Uuid
+  metadata  Json      @default("{}")
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now())
+  License   License[]
+}

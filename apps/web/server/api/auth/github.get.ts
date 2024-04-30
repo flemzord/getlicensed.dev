@@ -1,29 +1,25 @@
-import { schema } from '@getlicensed/db';
-import { eq } from 'drizzle-orm';
-
 async function getUserByEmail(email: string) {
-  return useDB()
-    .select()
-    .from(schema.users)
-    .where(eq(schema.users.email, email))
-    .limit(1);
+  return await useDB().user.findFirst({
+    where: {
+      email: email,
+    },
+  });
 }
 
 async function createUser(param: {
-  githubId: string;
+  githubId: number;
   name: string;
   email: string;
 }) {
-  return useDB()
-    .insert(schema.users)
-    .values({
+  return await useDB().user.create({
+    data: {
       name: param.name,
       email: param.email,
       githubId: param.githubId,
       createdAt: new Date(),
       updatedAt: new Date(),
-    })
-    .returning();
+    },
+  });
 }
 
 export default oauth.githubEventHandler({
@@ -32,11 +28,11 @@ export default oauth.githubEventHandler({
   },
   async onSuccess(event, { user }) {
     const existingUser = await getUserByEmail(user.email);
-    if (existingUser.length === 0) {
+    if (existingUser === null) {
       await createUser({
         email: user.email,
         name: user.name,
-        githubId: user.id.toString(),
+        githubId: user.id,
       });
     }
 

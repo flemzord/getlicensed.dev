@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import ArticlesModal from '~/components/ArticlesModal.vue';
+import ArticlesTable from '~/components/ArticlesTable.vue';
+import CustomersTable from '~/components/CustomersTable.vue';
 import TokensTable from '~/components/TokensTable.vue';
 
 definePageMeta({
@@ -32,6 +35,8 @@ useSeoMeta({
       </div>
     </header>
 
+    <ArticlesTable />
+    <CustomersTable />
     <TokensTable />
   </main>
 </template>

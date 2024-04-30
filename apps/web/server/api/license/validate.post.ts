@@ -1,5 +1,3 @@
-import { schema } from '@getlicensed/db';
-import { eq } from 'drizzle-orm';
 import { zh } from 'h3-zod';
 import { z } from 'zod';
 
@@ -18,17 +16,18 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  const getLicense = await useDB()
-    .select({
-      name: schema.tokens.name,
-      token: schema.tokens.token,
-      createdAt: schema.tokens.createdAt,
-      updatedAt: schema.tokens.updatedAt,
-    })
-    .from(schema.tokens)
-    .where(eq(schema.tokens.token, body.data.license))
-    .limit(1)
-    .execute();
+  const getLicense = await useDB().license.findFirst({
+    select: {
+      id: true,
+      name: true,
+      token: true,
+      createdAt: true,
+      updatedAt: true,
+    },
+    where: {
+      token: body.data.license,
+    },
+  });
 
   if (getLicense.length === 0) {
     throw createError({
@@ -38,6 +37,6 @@ export default defineEventHandler(async (event) => {
   }
 
   return {
-    data: getLicense[0],
+    data: getLicense,
   };
 });

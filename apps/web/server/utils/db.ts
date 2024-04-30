@@ -1,10 +1,5 @@
-import { queryClient } from '@getlicensed/db';
-import * as schema from '@getlicensed/db';
-
-export const tables = schema;
+import { prisma } from '@getlicensed/db/src';
 
 export function useDB() {
-  return queryClient;
+  return prisma;
 }
-
-export * from '@getlicensed/db';

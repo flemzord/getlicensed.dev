@@ -1,51 +1,16 @@
+import { Pool, neonConfig } from '@neondatabase/serverless';
+import { PrismaNeon } from '@prisma/adapter-neon';
+import { PrismaClient } from '@prisma/client';
+import ws from 'ws';
+
+neonConfig.webSocketConstructor = ws;
+const adapter = new PrismaNeon(
+  new Pool({ connectionString: process.env.DATABASE_URL }),
+);
+
 // @ts-ignore
-import { config } from 'dotenv';
-config({ path: '.env' });
-import { neon } from '@neondatabase/serverless';
-import { drizzle as drizzleHttp } from 'drizzle-orm/neon-http';
-import { migrate as migrateHttp } from 'drizzle-orm/neon-http/migrator';
-import { drizzle as drizzleNode } from 'drizzle-orm/node-postgres';
-import { migrate as migrateNode } from 'drizzle-orm/node-postgres/migrator';
-// @ts-ignore
-import pg from 'pg';
-
-export * from './types';
-import * as schema from './schema';
-export { schema };
-export * from 'drizzle-orm';
-
-const DATABASE_URL = process.env.DATABASE_URL;
-
-if (!DATABASE_URL) {
-  throw new Error('DATABASE_URL must be set in .env file');
-}
-
-export const queryClient =
+export const prisma =
   process.env.ENVIRONMENT === 'local'
-    ? drizzleNode(new pg.Pool({ connectionString: DATABASE_URL }))
-    : drizzleHttp(neon(DATABASE_URL));
-
-export async function dbMigrate() {
-  if (process.env.ENVIRONMENT === 'local')
-    // @ts-ignore
-    await migrateNode(queryClient, {
-      migrationsFolder: 'src/migrations',
-    });
-  // @ts-ignore
-  else
-    await migrateHttp(queryClient, {
-      migrationsFolder: 'src/migrations',
-    });
-}
-
-export const runMigrate = async () => {
-  console.log('Running database migrations...');
-
-  await dbMigrate()
-    .then(() => {
-      console.log('Database migrations done');
-    })
-    .catch((err) => {
-      console.error('Database migrations failed', err);
-    });
-};
+    ? new PrismaClient()
+    : new PrismaClient({ adapter });
+export * from '@prisma/client';

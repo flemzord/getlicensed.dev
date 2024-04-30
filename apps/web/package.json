@@ -23,16 +23,16 @@
     "@tailwindcss/forms": "^0.5.7",
     "@trpc/client": "^10.45.2",
     "@trpc/server": "^10.45.2",
-    "drizzle-orm": "^0.30.9",
     "h3-zod": "^0.5.3",
     "nuxt": "^3.11.2",
     "nuxt-auth-utils": "^0.0.24",
     "nuxt-cloudflare-analytics": "^1.0.8",
     "superjson": "^2.2.1",
     "trpc-nuxt": "^0.10.21",
-    "vue": "^3.4.26",
+    "uuid": "^9.0.1",
+    "vue": "^3.4.21",
     "vue-router": "^4.3.0",
-    "zod": "^3.23.5"
+    "zod": "^3.23.4"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240419.0",
