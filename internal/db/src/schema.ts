@@ -28,7 +28,7 @@ export const license = pgTable('License', {
   token: text('license').notNull(),
   name: text('name').notNull(),
   metadata: jsonb('metadata').default(sql`'{}'::jsonb`),
-  expiresAt: timestamp('expires_at'),
+  expiresAt: timestamp('expires_at').notNull(),
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
 });
