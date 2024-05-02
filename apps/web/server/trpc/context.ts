@@ -10,9 +10,9 @@ export async function createContext(event: H3Event) {
   const session = await requireUserSession(event);
   const user = await useDB()
     .select()
-    .from(schema.users)
+    .from(schema.user)
     // @ts-ignore
-    .where(eq(schema.users.githubId, session.user.id))
+    .where(eq(schema.user.githubId, session.user.id))
     .limit(1);
 
   return {

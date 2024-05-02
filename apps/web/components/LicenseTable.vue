@@ -8,7 +8,7 @@
             <p class="mt-2 text-sm text-gray-700">You can create, modify or delete a license.</p>
           </div>
           <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-            <TokensModal />
+            <LicenseModal />
           </div>
         </div>
         <div class="mt-8 flow-root">
@@ -47,7 +47,7 @@
                 </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200 bg-white">
-                  <tr v-for="token of tokens" :key="token.id">
+                  <tr v-for="token of license" :key="token.id">
                     <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">{{ token.name }}</td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ token.createdAt }}</td>
                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ token.updatedAt }}</td>
@@ -73,11 +73,11 @@ const toast = useToast();
 
 const { $client } = useNuxtApp();
 
-const { data: tokens } = await $client.tokens.all.useQuery();
+const { data: license } = await $client.license.all.useQuery();
 
 async function deleteToken(id) {
   console.log('deleteToken', id);
-  await $client.tokens.delete.mutate({ id });
+  await $client.license.delete.mutate({ id });
   toast.add({ title: 'License deleted', timeout: 5000, color: 'red' });
   await refreshNuxtData();
 }

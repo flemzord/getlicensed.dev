@@ -5,22 +5,8 @@
     {
       "idx": 0,
       "version": "5",
-      "when": 1714031454945,
-      "tag": "0000_brave_rocket_racer",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "5",
-      "when": 1714117035522,
-      "tag": "0001_remarkable_stature",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "5",
-      "when": 1714117146377,
-      "tag": "0002_next_thor",
+      "when": 1714639399840,
+      "tag": "0000_high_firebrand",
       "breakpoints": true
     }
   ]

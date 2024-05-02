@@ -2,7 +2,7 @@
   <div>
     <UButton @click="ticketsModalOpen = true"
             class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-      Add license
+      Add customer
     </UButton>
 
     <UModal v-model="ticketsModalOpen" prevent-close>
@@ -10,7 +10,7 @@
         <template #header>
           <div class="flex items-center justify-between">
             <h3 class="text-base font-semibold leading-6 text-gray-900 dark:text-white">
-              Create a new licence
+              Create a new customer
             </h3>
             <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="ticketsModalOpen = false" />
           </div>
@@ -18,7 +18,7 @@
 
         <template #default>
           <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
-            <UFormGroup label="Name of License" name="name">
+            <UFormGroup label="Name of Customer" name="name">
               <UInput v-model="state.name" />
             </UFormGroup>
 
@@ -62,13 +62,10 @@ const state = reactive({
 async function onSubmit(event: FormSubmitEvent<Schema>) {
   const { $client } = useNuxtApp();
 
-  const add = await $client.tokens.add.mutate(event.data);
-  console.log('add', add[0].token);
+  const add = await $client.customer.add.mutate(event.data);
   ticketsModalOpen.value = false;
   toast.add({
-    title: 'License created',
-    description: add[0].token,
-    timeout: 50000,
+    title: 'Customer created',
   });
   await refreshNuxtData();
 }

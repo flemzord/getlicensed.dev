@@ -20,13 +20,13 @@ export default defineEventHandler(async (event) => {
 
   const getLicense = await useDB()
     .select({
-      name: schema.tokens.name,
-      token: schema.tokens.token,
-      createdAt: schema.tokens.createdAt,
-      updatedAt: schema.tokens.updatedAt,
+      name: schema.license.name,
+      token: schema.license.token,
+      createdAt: schema.license.createdAt,
+      updatedAt: schema.license.updatedAt,
     })
-    .from(schema.tokens)
-    .where(eq(schema.tokens.token, body.data.license))
+    .from(schema.license)
+    .where(eq(schema.license.token, body.data.license))
     .limit(1)
     .execute();
 

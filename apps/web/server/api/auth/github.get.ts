@@ -4,8 +4,8 @@ import { eq } from 'drizzle-orm';
 async function getUserByEmail(email: string) {
   return useDB()
     .select()
-    .from(schema.users)
-    .where(eq(schema.users.email, email))
+    .from(schema.user)
+    .where(eq(schema.user.email, email))
     .limit(1);
 }
 
@@ -15,7 +15,7 @@ async function createUser(param: {
   email: string;
 }) {
   return useDB()
-    .insert(schema.users)
+    .insert(schema.user)
     .values({
       name: param.name,
       email: param.email,

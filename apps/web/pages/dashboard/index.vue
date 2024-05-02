@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import TokensTable from '~/components/TokensTable.vue';
+import CustomerTable from '~/components/CustomerTable.vue';
+import TokensTable from '~/components/LicenseTable.vue';
+import ProductTable from '~/components/ProductTable.vue';
 
 definePageMeta({
   layout: 'dashboard',
@@ -32,6 +34,8 @@ useSeoMeta({
       </div>
     </header>
 
-    <TokensTable />
+    <ProductTable />
+    <CustomerTable />
+    <LicenseTable />
   </main>
 </template>
