@@ -19,7 +19,7 @@
     "prisma:studio": "prisma studio"
   },
   "devDependencies": {
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.12.8",
     "@types/ws": "^8.5.10",
     "prisma": "^5.13.0"
   },
