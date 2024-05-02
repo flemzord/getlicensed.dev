@@ -8,9 +8,9 @@ export default defineNuxtConfig({
 
   nitro: {
     // preset: 'cloudflare-pages',
-    preset: 'vercel-edge',
+    preset: 'vercel',
     rollupConfig: {
-      external: ['cloudflare:sockets', 'pg-native', '@prisma/client'],
+      external: ['cloudflare:sockets', 'pg-native'],
     },
     esbuild: {
       options: {
