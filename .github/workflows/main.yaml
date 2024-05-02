@@ -19,7 +19,7 @@ jobs:
       - run: pnpm biome ci .
 
   test:
-    name: test
+    name: Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
