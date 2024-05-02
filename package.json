@@ -13,6 +13,7 @@
     "prepare": "husky",
     "build": "dotenv -e .env -- turbo build",
     "dev": "dotenv -e .env -- pnpm run db:migrate && dotenv -e .env -- turbo dev",
+    "test": "dotenv -e .env -- turbo test",
     "db:migrate": "dotenv -e .env -- turbo db:migrate --filter './internal/db'",
     "fmt": "biome format . --write && biome check . --apply",
     "bump-versions": "pnpm changeset version && pnpm install"

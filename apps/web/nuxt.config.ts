@@ -24,7 +24,8 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/tailwindcss',
     'nuxt-cloudflare-analytics',
-    "@nuxtjs/sitemap"
+    "@nuxtjs/sitemap",
+    "@nuxt/test-utils/module"
   ],
 
   cloudflareAnalytics: {

@@ -9,3 +9,23 @@ function createRandomString(length: number) {
   }
   return result;
 }
+
+export interface License {
+  name: string;
+  token: string;
+  productName: string;
+  customerName: string;
+  expirationDate: Date;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export const checkLicenseIsValid = async (license: License) => {
+  if (license.expirationDate <= new Date()) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'License expired',
+    });
+  }
+  return license;
+};

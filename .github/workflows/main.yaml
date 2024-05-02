@@ -18,11 +18,21 @@ jobs:
         uses: ./.github/actions/install
       - run: pnpm biome ci .
 
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install
+        uses: ./.github/actions/install
+      - run: pnpm run test
+
   production:
     name: Deploy to Production for Web
     environment: Production
     needs:
       - lint
+      - test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

@@ -10,7 +10,8 @@
     "preview": "npm run build && wrangler pages dev",
     "postinstall": "nuxt prepare",
     "deploy:production": "npm run build && wrangler pages deploy --env=production",
-    "cf-typegen": "wrangler types"
+    "cf-typegen": "wrangler types",
+    "test": "vitest run"
   },
   "dependencies": {
     "@getlicensed/db": "workspace:^",
@@ -36,11 +37,16 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240419.0",
+    "@nuxt/test-utils": "^3.12.1",
+    "@vue/test-utils": "^2.4.5",
     "dotenv": "^16.4.5",
+    "happy-dom": "^14.7.1",
     "nitro-cloudflare-dev": "^0.1.4",
+    "playwright-core": "^1.43.1",
     "ts-node": "^10.9.2",
     "tsx": "^4.8.2",
     "typescript": "^5.4.5",
+    "vitest": "^1.5.3",
     "wrangler": "^3.53.0"
   }
 }
