@@ -72,14 +72,14 @@ importers:
         specifier: ^10.45.2
         version: 10.45.2
       drizzle-orm:
-        specifier: ^0.30.9
-        version: 0.30.9(@cloudflare/workers-types@4.20240423.0)
+        specifier: ^0.30.10
+        version: 0.30.10(@cloudflare/workers-types@4.20240423.0)
       h3-zod:
         specifier: ^0.5.3
         version: 0.5.3(h3@1.11.1)(zod@3.23.5)
       nuxt:
         specifier: ^3.11.2
-        version: 3.11.2(@types/node@20.12.8)(@unocss/reset@0.59.4)(drizzle-orm@0.30.9)(floating-vue@5.2.2)(typescript@5.4.5)(unocss@0.59.4)(vite@5.2.11)
+        version: 3.11.2(@types/node@20.12.8)(@unocss/reset@0.59.4)(drizzle-orm@0.30.10)(floating-vue@5.2.2)(typescript@5.4.5)(unocss@0.59.4)(vite@5.2.11)
       nuxt-auth-utils:
         specifier: ^0.0.24
         version: 0.0.24
@@ -155,8 +155,8 @@ importers:
         specifier: ^0.20.17
         version: 0.20.17
       drizzle-orm:
-        specifier: ^0.30.9
-        version: 0.30.9(@neondatabase/serverless@0.9.1)(pg@8.11.5)
+        specifier: ^0.30.10
+        version: 0.30.10(@neondatabase/serverless@0.9.1)(pg@8.11.5)
       pg:
         specifier: ^8.11.5
         version: 8.11.5
@@ -2827,7 +2827,7 @@ packages:
       '@nuxt/kit': 3.11.2
       '@nuxt/schema': 3.11.2
       execa: 7.2.0
-      nuxt: 3.11.2(@types/node@20.12.8)(@unocss/reset@0.59.4)(drizzle-orm@0.30.9)(floating-vue@5.2.2)(typescript@5.4.5)(unocss@0.59.4)(vite@5.2.11)
+      nuxt: 3.11.2(@types/node@20.12.8)(@unocss/reset@0.59.4)(drizzle-orm@0.30.10)(floating-vue@5.2.2)(typescript@5.4.5)(unocss@0.59.4)(vite@5.2.11)
       vite: 5.2.11(@types/node@20.12.8)
     transitivePeerDependencies:
       - rollup
@@ -2930,7 +2930,7 @@ packages:
       launch-editor: 2.6.1
       local-pkg: 0.5.0
       magicast: 0.3.4
-      nuxt: 3.11.2(@types/node@20.12.8)(@unocss/reset@0.59.4)(drizzle-orm@0.30.9)(floating-vue@5.2.2)(typescript@5.4.5)(unocss@0.59.4)(vite@5.2.11)
+      nuxt: 3.11.2(@types/node@20.12.8)(@unocss/reset@0.59.4)(drizzle-orm@0.30.10)(floating-vue@5.2.2)(typescript@5.4.5)(unocss@0.59.4)(vite@5.2.11)
       nypm: 0.3.8
       ohash: 1.1.3
       pacote: 18.0.2
@@ -5135,7 +5135,7 @@ packages:
       '@vueuse/core': 10.9.0(vue@3.4.26)
       '@vueuse/metadata': 10.9.0
       local-pkg: 0.5.0
-      nuxt: 3.11.2(@types/node@20.12.8)(@unocss/reset@0.59.4)(drizzle-orm@0.30.9)(floating-vue@5.2.2)(typescript@5.4.5)(unocss@0.59.4)(vite@5.2.11)
+      nuxt: 3.11.2(@types/node@20.12.8)(@unocss/reset@0.59.4)(drizzle-orm@0.30.10)(floating-vue@5.2.2)(typescript@5.4.5)(unocss@0.59.4)(vite@5.2.11)
       vue-demi: 0.14.7(vue@3.4.26)
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -6691,7 +6691,7 @@ packages:
       is-data-view: 1.0.1
     dev: true
 
-  /db0@0.1.4(drizzle-orm@0.30.9):
+  /db0@0.1.4(drizzle-orm@0.30.10):
     resolution: {integrity: sha512-Ft6eCwONYxlwLjBXSJxw0t0RYtA5gW9mq8JfBXn9TtC0nDPlqePAhpv9v4g9aONBi6JI1OXHTKKkUYGd+BOrCA==}
     peerDependencies:
       '@libsql/client': ^0.5.2
@@ -6705,7 +6705,7 @@ packages:
       drizzle-orm:
         optional: true
     dependencies:
-      drizzle-orm: 0.30.9(@cloudflare/workers-types@4.20240423.0)
+      drizzle-orm: 0.30.10(@cloudflare/workers-types@4.20240423.0)
     dev: false
 
   /debug@2.6.9:
@@ -7052,8 +7052,8 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.30.9(@cloudflare/workers-types@4.20240423.0):
-    resolution: {integrity: sha512-VOiCFsexErmgqvNCOmbzmqDCZzZsHoz6SkWAjTFxsTr1AllKDbDJ2+GgedLXsXMDgpg/ljDG1zItIFeZtiO2LA==}
+  /drizzle-orm@0.30.10(@cloudflare/workers-types@4.20240423.0):
+    resolution: {integrity: sha512-IRy/QmMWw9lAQHpwbUh1b8fcn27S/a9zMIzqea1WNOxK9/4EB8gIo+FZWLiPXzl2n9ixGSv8BhsLZiOppWEwBw==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
@@ -7135,8 +7135,8 @@ packages:
       '@cloudflare/workers-types': 4.20240423.0
     dev: false
 
-  /drizzle-orm@0.30.9(@neondatabase/serverless@0.9.1)(pg@8.11.5):
-    resolution: {integrity: sha512-VOiCFsexErmgqvNCOmbzmqDCZzZsHoz6SkWAjTFxsTr1AllKDbDJ2+GgedLXsXMDgpg/ljDG1zItIFeZtiO2LA==}
+  /drizzle-orm@0.30.10(@neondatabase/serverless@0.9.1)(pg@8.11.5):
+    resolution: {integrity: sha512-IRy/QmMWw9lAQHpwbUh1b8fcn27S/a9zMIzqea1WNOxK9/4EB8gIo+FZWLiPXzl2n9ixGSv8BhsLZiOppWEwBw==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
@@ -10959,7 +10959,7 @@ packages:
       mlly: 1.6.1
       pkg-types: 1.1.0
 
-  /nitropack@2.9.6(drizzle-orm@0.30.9):
+  /nitropack@2.9.6(drizzle-orm@0.30.10):
     resolution: {integrity: sha512-HP2PE0dREcDIBVkL8Zm6eVyrDd10/GI9hTL00PHvjUM8I9Y/2cv73wRDmxNyInfrx/CJKHATb2U/pQrqpzJyXA==}
     engines: {node: ^16.11.0 || >=17.0.0}
     hasBin: true
@@ -10990,7 +10990,7 @@ packages:
       cookie-es: 1.1.0
       croner: 8.0.2
       crossws: 0.2.4
-      db0: 0.1.4(drizzle-orm@0.30.9)
+      db0: 0.1.4(drizzle-orm@0.30.10)
       defu: 6.1.4
       destr: 2.0.3
       dot-prop: 8.0.2
@@ -11358,7 +11358,7 @@ packages:
       - webpack
     dev: false
 
-  /nuxt@3.11.2(@types/node@20.12.8)(@unocss/reset@0.59.4)(drizzle-orm@0.30.9)(floating-vue@5.2.2)(typescript@5.4.5)(unocss@0.59.4)(vite@5.2.11):
+  /nuxt@3.11.2(@types/node@20.12.8)(@unocss/reset@0.59.4)(drizzle-orm@0.30.10)(floating-vue@5.2.2)(typescript@5.4.5)(unocss@0.59.4)(vite@5.2.11):
     resolution: {integrity: sha512-Be1d4oyFo60pdF+diBolYDcfNemoMYM3R8PDjhnGrs/w3xJoDH1YMUVWHXXY8WhSmYZI7dyBehx/6kTfGFliVA==}
     engines: {node: ^14.18.0 || >=16.10.0}
     hasBin: true
@@ -11402,7 +11402,7 @@ packages:
       knitwork: 1.1.0
       magic-string: 0.30.10
       mlly: 1.6.1
-      nitropack: 2.9.6(drizzle-orm@0.30.9)
+      nitropack: 2.9.6(drizzle-orm@0.30.10)
       nuxi: 3.11.1
       nypm: 0.3.8
       ofetch: 1.3.4

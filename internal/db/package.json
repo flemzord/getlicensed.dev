@@ -16,7 +16,7 @@
     "@types/node": "^20.12.7",
     "dotenv-cli": "^7.4.1",
     "drizzle-kit": "^0.20.17",
-    "drizzle-orm": "^0.30.9",
+    "drizzle-orm": "^0.30.10",
     "pg": "^8.11.5",
     "ts-node": "^10.9.2",
     "tsx": "^4.8.2",
