@@ -1,6 +1,6 @@
 export const generateLicenseKey: string = `license_${createRandomString(24)}`;
 
-function createRandomString(length: number) {
+export function createRandomString(length: number) {
   const chars =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let result = '';

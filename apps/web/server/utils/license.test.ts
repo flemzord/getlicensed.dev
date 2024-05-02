@@ -1,6 +1,10 @@
 // @vitest-environment nuxt
 import { expect, test } from 'vitest';
-import { type License, checkLicenseIsValid } from '~/server/utils/license';
+import {
+  type License,
+  checkLicenseIsValid,
+  createRandomString,
+} from '~/server/utils/license';
 
 test('check if license is expired', async () => {
   const today = new Date();
@@ -35,4 +39,11 @@ test('check if license is valid', async () => {
   };
   const result = await checkLicenseIsValid(license);
   expect(result).toEqual(license);
+});
+
+test('check if random string is generated correctly', () => {
+  const length = 10;
+  const randomString = createRandomString(length);
+  expect(randomString).toHaveLength(length);
+  expect(randomString).toMatch(/^[A-Za-z0-9]+$/);
 });
