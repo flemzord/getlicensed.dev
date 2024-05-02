@@ -20,9 +20,6 @@ export const t = initTRPC.context<Context>().create({
 });
 
 const isAuthed = t.middleware(({ next, ctx }) => {
-  // console.log('toto: ', ctx.user.length)
-  // console.log('toto2: ', ctx.user)
-  // console.log('toto3: ', ctx.session)
   if (ctx.user.length === 0 || ctx.user.length > 1) {
     throw new TRPCError({ code: 'UNAUTHORIZED' });
   }

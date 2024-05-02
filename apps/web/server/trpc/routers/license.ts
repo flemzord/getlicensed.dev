@@ -6,6 +6,9 @@ import { generateLicenseKey } from '~/server/utils/license';
 
 const AddShape = z.object({
   name: z.string(),
+  customerId: z.string().uuid(),
+  productId: z.string().uuid(),
+  expirationDate: z.string(),
 });
 
 const DeleteShape = z.object({
@@ -17,6 +20,14 @@ export const licenseRouter = t.router({
     return useDB()
       .select()
       .from(schema.license)
+      .innerJoin(
+        schema.customer,
+        eq(schema.license.customerId, schema.customer.id),
+      )
+      .innerJoin(
+        schema.product,
+        eq(schema.license.productId, schema.product.id),
+      )
       .where(eq(schema.license.userId, ctx.userId))
       .orderBy(desc(schema.license.createdAt));
   }),
@@ -26,7 +37,10 @@ export const licenseRouter = t.router({
       .values({
         name: input.name,
         userId: ctx.userId,
+        customerId: input.customerId,
+        productId: input.productId,
         token: generateLicenseKey,
+        expiresAt: new Date(input.expirationDate),
       })
       .returning();
   }),

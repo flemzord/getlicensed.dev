@@ -19,12 +19,18 @@ export const license = pgTable('License', {
   userId: uuid('user_id')
     .notNull()
     .references(() => user.id),
+  productId: uuid('product_id')
+    .notNull()
+    .references(() => product.id),
+  customerId: uuid('customer_id')
+    .notNull()
+    .references(() => customer.id),
   token: text('license').notNull(),
   name: text('name').notNull(),
   metadata: jsonb('metadata').default(sql`'{}'::jsonb`),
+  expiresAt: timestamp('expires_at'),
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
-  deletedAt: timestamp('deleted_at'),
 });
 
 export const licenseRelations = relations(user, ({ one }) => ({
@@ -41,7 +47,6 @@ export const product = pgTable('Product', {
   metadata: jsonb('metadata').default(sql`'{}'::jsonb`),
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
-  deletedAt: timestamp('deleted_at'),
 });
 
 export const customer = pgTable('Customer', {
@@ -53,5 +58,4 @@ export const customer = pgTable('Customer', {
   metadata: jsonb('metadata').default(sql`'{}'::jsonb`),
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
-  deletedAt: timestamp('deleted_at'),
 });

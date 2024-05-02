@@ -22,6 +22,19 @@
               <UInput v-model="state.name" />
             </UFormGroup>
 
+            <UFormGroup label="Select your Article" name="article_id">
+              <USelect v-model="state.productId" :options="products" option-attribute="name" value-attribute="id" required>
+              </USelect>
+            </UFormGroup>
+
+            <UFormGroup label="Select your Customer" name="customer_id">
+              <USelect v-model="state.customerId" :options="customers" option-attribute="name" value-attribute="id" required />
+            </UFormGroup>
+
+            <UFormGroup label="Expiration Date" name="expiration_date">
+              <UInput v-model="state.expirationDate" type="date" />
+            </UFormGroup>
+
             <UButton type="submit" class="bg-indigo-600 hover:bg-indigo-900">
               Submit
             </UButton>
@@ -51,19 +64,26 @@ import type { FormSubmitEvent } from '#ui/types';
 
 const schema = z.object({
   name: z.string().min(3, 'Must be at least 3 characters'),
+  customerId: z.string().uuid(),
+  productId: z.string().uuid(),
+  expirationDate: z.string(),
 });
 
 type Schema = z.output<typeof schema>;
 
 const state = reactive({
   name: undefined,
+  customerId: undefined,
+  productId: undefined,
+  expirationDate: undefined,
 });
 
-async function onSubmit(event: FormSubmitEvent<Schema>) {
-  const { $client } = useNuxtApp();
+const { $client } = useNuxtApp();
+const { data: customers } = await $client.customer.all.useQuery();
+const { data: products } = await $client.product.all.useQuery();
 
+async function onSubmit(event: FormSubmitEvent<Schema>) {
   const add = await $client.license.add.mutate(event.data);
-  console.log('add', add[0].token);
   ticketsModalOpen.value = false;
   toast.add({
     title: 'License created',

@@ -76,7 +76,6 @@ const { $client } = useNuxtApp();
 const { data: product } = await $client.product.all.useQuery();
 
 async function deleteToken(id) {
-  console.log('deleteToken', id);
   await $client.product.delete.mutate({ id });
   toast.add({ title: 'Product deleted', timeout: 5000, color: 'red' });
   await refreshNuxtData();
