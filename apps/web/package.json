@@ -39,7 +39,7 @@
     "dotenv": "^16.4.5",
     "nitro-cloudflare-dev": "^0.1.4",
     "ts-node": "^10.9.2",
-    "tsx": "^4.7.2",
+    "tsx": "^4.8.2",
     "typescript": "^5.4.5",
     "wrangler": "^3.53.0"
   }
