@@ -57,6 +57,7 @@ logs
 # Local env files
 .env.*
 !.env.example
+.vercel
 
 # wrangler files
 .wrangler
