@@ -1,5 +1,12 @@
 import { relations, sql } from 'drizzle-orm';
-import { jsonb, pgTable, text, timestamp, uuid } from 'drizzle-orm/pg-core';
+import {
+  jsonb,
+  pgEnum,
+  pgTable,
+  text,
+  timestamp,
+  uuid,
+} from 'drizzle-orm/pg-core';
 
 export const user = pgTable('User', {
   id: uuid('id').primaryKey().default(sql`gen_random_uuid()`),
@@ -59,3 +66,28 @@ export const customer = pgTable('Customer', {
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
 });
+
+export const licenseUsageTypeEnum = pgEnum('license_log_type', [
+  'LICENSE_VALIDATE',
+]);
+export const licenseUsageActionEnum = pgEnum('license_log_action', [
+  'SUCCESS',
+  'EXPIRED',
+]);
+
+export const licenseUsage = pgTable('License_usage', {
+  id: uuid('id').primaryKey().default(sql`gen_random_uuid()`),
+  licenseId: uuid('license_id')
+    .notNull()
+    .references(() => license.id),
+  type: licenseUsageTypeEnum('type'),
+  action: licenseUsageActionEnum('action'),
+  metadata: jsonb('metadata').default(sql`'{}'::jsonb`),
+  createdAt: timestamp('created_at', { withTimezone: false })
+    .notNull()
+    .defaultNow(),
+});
+
+export const licenseUsageRelations = relations(licenseUsage, ({ one }) => ({
+  license: one(license),
+}));

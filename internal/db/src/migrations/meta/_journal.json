@@ -15,6 +15,13 @@
       "when": 1714678164827,
       "tag": "0001_funny_trish_tilby",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1714851280261,
+      "tag": "0002_milky_big_bertha",
+      "breakpoints": true
     }
   ]
 }

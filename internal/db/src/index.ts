@@ -22,8 +22,8 @@ if (!DATABASE_URL) {
 
 export const queryClient =
   process.env.ENVIRONMENT === 'local'
-    ? drizzleNode(new pg.Pool({ connectionString: DATABASE_URL }))
-    : drizzleHttp(neon(DATABASE_URL));
+    ? drizzleNode(new pg.Pool({ connectionString: DATABASE_URL }), { schema })
+    : drizzleHttp(neon(DATABASE_URL), { schema });
 
 export async function dbMigrate() {
   if (process.env.ENVIRONMENT === 'local')

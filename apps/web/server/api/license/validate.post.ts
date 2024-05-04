@@ -2,7 +2,11 @@ import { schema } from '@getlicensed/db';
 import { eq } from 'drizzle-orm';
 import { zh } from 'h3-zod';
 import { z } from 'zod';
-import { type License, checkLicenseIsValid } from '~/server/utils/license';
+import {
+  type License,
+  checkLicenseIsValid,
+  writeSuccessLicenseUsage,
+} from '~/server/utils/license';
 
 export default defineEventHandler(async (event) => {
   const body = await zh.useSafeValidatedBody(
@@ -21,6 +25,7 @@ export default defineEventHandler(async (event) => {
 
   const license: License[] = await useDB()
     .select({
+      id: schema.license.id,
       name: schema.license.name,
       token: schema.license.token,
       productName: schema.product.name,
@@ -47,6 +52,7 @@ export default defineEventHandler(async (event) => {
   }
 
   await checkLicenseIsValid(license[0]);
+  await writeSuccessLicenseUsage(license[0]);
 
   return {
     data: license[0],

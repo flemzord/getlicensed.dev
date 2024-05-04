@@ -15,6 +15,10 @@ const DeleteShape = z.object({
   id: z.string(),
 });
 
+const GetByIdShape = z.object({
+  id: z.string(),
+});
+
 export const licenseRouter = t.router({
   all: protectedProcedure.query(({ ctx }) => {
     return useDB()
@@ -54,5 +58,11 @@ export const licenseRouter = t.router({
         ),
       )
       .returning();
+  }),
+  getById: protectedProcedure.input(GetByIdShape).query(({ input, ctx }) => {
+    return useDB().query.license.findFirst({
+      where: (license, { and, eq }) =>
+        and(eq(license.id, input.id), eq(license.userId, ctx.userId)),
+    });
   }),
 });
