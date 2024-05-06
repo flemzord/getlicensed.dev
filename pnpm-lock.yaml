@@ -79,7 +79,7 @@ importers:
         version: 1.0.1(chart.js@4.4.2)(moment@2.30.1)
       drizzle-orm:
         specifier: ^0.30.9
-        version: 0.30.9(@cloudflare/workers-types@4.20240423.0)
+        version: 0.30.9(@cloudflare/workers-types@4.20240502.0)
       h3-zod:
         specifier: ^0.5.3
         version: 0.5.3(h3@1.11.1)(zod@3.23.5)
@@ -115,8 +115,8 @@ importers:
         version: 3.23.5
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: ^4.20240419.0
-        version: 4.20240423.0
+        specifier: ^4.20240502.0
+        version: 4.20240502.0
       '@nuxt/test-utils':
         specifier: ^3.12.1
         version: 3.12.1(@vue/test-utils@2.4.5)(h3@1.11.1)(happy-dom@14.7.1)(playwright-core@1.43.1)(vite@5.2.11)(vitest@1.5.3)(vue-router@4.3.2)(vue@3.4.26)
@@ -149,7 +149,7 @@ importers:
         version: 1.5.3(@types/node@20.12.8)(happy-dom@14.7.1)
       wrangler:
         specifier: ^3.53.0
-        version: 3.53.0(@cloudflare/workers-types@4.20240423.0)
+        version: 3.53.0(@cloudflare/workers-types@4.20240502.0)
 
   internal/db:
     dependencies:
@@ -1104,8 +1104,8 @@ packages:
     dev: true
     optional: true
 
-  /@cloudflare/workers-types@4.20240423.0:
-    resolution: {integrity: sha512-ssuccb3j+URp6mP2p0PcQE9vmS3YeKBQnALHF9P3yQfUAFozuhTsDTbqmL+zPrJvUcG7SL2xVQkNDF9QJeKDZw==}
+  /@cloudflare/workers-types@4.20240502.0:
+    resolution: {integrity: sha512-OB1jIyPOzyOcuZFHWhsQnkRLN6u8+jmU9X3T4KZlGgn3Ivw8pBiswhLOp+yFeChR3Y4/5+V0hPFRko5SReordg==}
 
   /@commitlint/config-validator@19.0.3:
     resolution: {integrity: sha512-2D3r4PKjoo59zBc2auodrSCaUnCSALCx54yveOFwwP/i2kfEAQrygwOleFWswLqK0UL/F9r07MFi5ev2ohyM4Q==}
@@ -3252,7 +3252,7 @@ packages:
   /@nuxthub/core@0.5.14(nuxt@3.11.2)(vite@5.2.11):
     resolution: {integrity: sha512-70K1bcWP8RyXzhrwJhgDYBfH3JM9ZINbKdFDxukROrfsBPh50YghaL2bA7On/gNSNuxbPDST6I+9JnmFH+Mhrg==}
     dependencies:
-      '@cloudflare/workers-types': 4.20240423.0
+      '@cloudflare/workers-types': 4.20240502.0
       '@nuxt/devtools-kit': 1.2.0(nuxt@3.11.2)(vite@5.2.11)
       '@nuxt/kit': 3.11.2
       '@sindresorhus/slugify': 2.2.1
@@ -6738,7 +6738,7 @@ packages:
       drizzle-orm:
         optional: true
     dependencies:
-      drizzle-orm: 0.30.9(@cloudflare/workers-types@4.20240423.0)
+      drizzle-orm: 0.30.9(@cloudflare/workers-types@4.20240502.0)
     dev: false
 
   /debug@2.6.9:
@@ -7085,7 +7085,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.30.9(@cloudflare/workers-types@4.20240423.0):
+  /drizzle-orm@0.30.9(@cloudflare/workers-types@4.20240502.0):
     resolution: {integrity: sha512-VOiCFsexErmgqvNCOmbzmqDCZzZsHoz6SkWAjTFxsTr1AllKDbDJ2+GgedLXsXMDgpg/ljDG1zItIFeZtiO2LA==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -7165,7 +7165,7 @@ packages:
       sqlite3:
         optional: true
     dependencies:
-      '@cloudflare/workers-types': 4.20240423.0
+      '@cloudflare/workers-types': 4.20240502.0
     dev: false
 
   /drizzle-orm@0.30.9(@neondatabase/serverless@0.9.1)(pg@8.11.5):
@@ -15530,7 +15530,7 @@ packages:
       '@cloudflare/workerd-windows-64': 1.20240419.0
     dev: true
 
-  /wrangler@3.53.0(@cloudflare/workers-types@4.20240423.0):
+  /wrangler@3.53.0(@cloudflare/workers-types@4.20240502.0):
     resolution: {integrity: sha512-JxkvCQekL9j8Mu4CEKM/HEVyDnymWzKQuMUuJH0yum1AilutD5HAP9kVVYmvu7BvwlRyRUAj8TI5OUxXnLCEpQ==}
     engines: {node: '>=16.17.0'}
     hasBin: true
@@ -15541,7 +15541,7 @@ packages:
         optional: true
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.2
-      '@cloudflare/workers-types': 4.20240423.0
+      '@cloudflare/workers-types': 4.20240502.0
       '@esbuild-plugins/node-globals-polyfill': 0.2.3(esbuild@0.17.19)
       '@esbuild-plugins/node-modules-polyfill': 0.2.2(esbuild@0.17.19)
       blake3-wasm: 2.1.5
