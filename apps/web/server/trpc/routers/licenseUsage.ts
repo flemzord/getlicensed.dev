@@ -1,5 +1,5 @@
 import { schema } from '@getlicensed/db';
-import {and, desc, eq, sql} from 'drizzle-orm';
+import { and, desc, eq, sql } from 'drizzle-orm';
 import { z } from 'zod';
 import { protectedProcedure, t } from '~/server/trpc/trpc';
 import { generateLicenseKey } from '~/server/utils/license';
@@ -14,6 +14,6 @@ export const licenseUsageRouter = t.router({
 FROM "License_usage"
 WHERE license_id = ${input.id} AND type = 'LICENSE_VALIDATE'
 GROUP BY time,action
-ORDER BY time DESC LIMIT 10;`)
+ORDER BY time DESC LIMIT 10;`);
   }),
 });
