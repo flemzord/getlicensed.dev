@@ -1,15 +1,11 @@
 <script setup lang="ts">
-import CustomerTable from '~/components/CustomerTable.vue';
-import TokensTable from '~/components/LicenseTable.vue';
-import ProductTable from '~/components/ProductTable.vue';
-
 definePageMeta({
   layout: 'dashboard',
   middleware: 'auth',
 });
 
 useSeoMeta({
-  title: 'Dashboard - GetLicensed',
+  title: 'Customer - GetLicensed',
 });
 </script>
 
@@ -27,11 +23,15 @@ useSeoMeta({
         <div class="mx-auto flex max-w-2xl items-center justify-between gap-x-8 lg:mx-0 lg:max-w-none">
           <div class="flex items-center gap-x-6">
             <h1>
-              <div class="mt-1 text-base font-semibold leading-6 text-gray-900">Under construction</div>
+              <div class="mt-1 text-base font-semibold leading-6 text-gray-900">Customers</div>
             </h1>
+            <div>
+              <CustomerModal />
+            </div>
           </div>
         </div>
       </div>
     </header>
+    <CustomerTable />
   </main>
 </template>

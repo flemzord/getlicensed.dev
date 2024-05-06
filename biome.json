@@ -1,7 +1,14 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.7.1/schema.json",
   "files": {
-    "ignore": [".nuxt/*", "dist/*", "worker-configuration.d.ts", "public/*"]
+    "ignore": [
+      "./internal/db/src/seed.ts",
+      "./internal/db/src/seeds/*",
+      ".nuxt/*",
+      "dist/*",
+      "worker-configuration.d.ts",
+      "public/*"
+    ]
   },
   "organizeImports": {
     "enabled": true

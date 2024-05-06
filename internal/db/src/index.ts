@@ -1,6 +1,4 @@
 // @ts-ignore
-import { config } from 'dotenv';
-config({ path: '.env' });
 import { neon } from '@neondatabase/serverless';
 import { drizzle as drizzleHttp } from 'drizzle-orm/neon-http';
 import { migrate as migrateHttp } from 'drizzle-orm/neon-http/migrator';

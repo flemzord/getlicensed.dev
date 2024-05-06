@@ -1,17 +1,22 @@
 <script setup lang="ts">
-import CustomerTable from '~/components/CustomerTable.vue';
-import TokensTable from '~/components/LicenseTable.vue';
-import ProductTable from '~/components/ProductTable.vue';
-
 definePageMeta({
   layout: 'dashboard',
   middleware: 'auth',
 });
 
 useSeoMeta({
-  title: 'Dashboard - GetLicensed',
+  title: 'License - GetLicensed',
 });
+
+const { $client } = useNuxtApp();
+const route = useRoute();
+
+const { data: license } = await $client.license.getById.useQuery({
+  id: route.params.id.toString(),
+});
+const toto = license.value;
 </script>
+
 
 <template>
   <main>
@@ -27,11 +32,13 @@ useSeoMeta({
         <div class="mx-auto flex max-w-2xl items-center justify-between gap-x-8 lg:mx-0 lg:max-w-none">
           <div class="flex items-center gap-x-6">
             <h1>
-              <div class="mt-1 text-base font-semibold leading-6 text-gray-900">Under construction</div>
+              <div class="mt-1 text-base font-semibold leading-6 text-gray-900">License {{ toto?.name }} ({{ toto?.id }})</div>
             </h1>
           </div>
         </div>
       </div>
     </header>
+
+    <LicenseChart :licenseId="route.params.id.toString()" />
   </main>
 </template>

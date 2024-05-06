@@ -13,7 +13,7 @@ export const user = pgTable('User', {
   id: uuid('id').primaryKey().default(sql`gen_random_uuid()`),
   email: text('email').notNull(),
   name: text('name'),
-  githubId: text('githubId'),
+  githubId: text('githubId').unique(),
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
 });
