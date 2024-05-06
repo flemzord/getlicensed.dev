@@ -23,22 +23,11 @@ export interface License {
   updatedAt: Date;
 }
 
-export const checkLicenseIsValid = async (license: License) => {
-  if (license.expirationDate <= new Date()) {
-    await writeExpiredLicenseUsage(license);
-    throw createError({
-      statusCode: 400,
-      statusMessage: 'License expired',
-    });
-  }
-  return license;
-};
-
 export const writeSuccessLicenseUsage = async (license: License) => {
   return useDB().insert(schema.licenseUsage).values({
     licenseId: license.id,
     type: 'LICENSE_VALIDATE',
-    action: 'SUCCESS',
+    action: schema.licenseUsageActionEnum.enumValues[0],
   });
 };
 
@@ -46,6 +35,6 @@ export const writeExpiredLicenseUsage = async (license: License) => {
   return useDB().insert(schema.licenseUsage).values({
     licenseId: license.id,
     type: 'LICENSE_VALIDATE',
-    action: 'EXPIRED',
+    action: schema.licenseUsageActionEnum.enumValues[1],
   });
 };

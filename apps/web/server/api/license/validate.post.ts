@@ -4,7 +4,7 @@ import { zh } from 'h3-zod';
 import { z } from 'zod';
 import {
   type License,
-  checkLicenseIsValid,
+  writeExpiredLicenseUsage,
   writeSuccessLicenseUsage,
 } from '~/server/utils/license';
 
@@ -51,7 +51,13 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  await checkLicenseIsValid(license[0]);
+  if (license[0].expirationDate <= new Date()) {
+    await writeExpiredLicenseUsage(license[0]);
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'License expired',
+    });
+  }
   await writeSuccessLicenseUsage(license[0]);
 
   return {

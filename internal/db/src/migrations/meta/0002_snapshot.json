@@ -1,5 +1,5 @@
 {
-  "id": "44e6f9c9-26f2-4550-ab91-d58b7e86eb5d",
+  "id": "c9489e23-7df8-453e-8d60-ca510f1dc969",
   "prevId": "e7c6b701-a6f1-4473-b140-98c3349ca2f8",
   "version": "5",
   "dialect": "pg",
@@ -186,12 +186,12 @@
       "name": "License_usage",
       "schema": "",
       "columns": {
-        "id": {
-          "name": "id",
-          "type": "uuid",
-          "primaryKey": true,
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp (2) with time zone",
+          "primaryKey": false,
           "notNull": true,
-          "default": "gen_random_uuid()"
+          "default": "now()"
         },
         "license_id": {
           "name": "license_id",
@@ -210,20 +210,6 @@
           "type": "license_log_action",
           "primaryKey": false,
           "notNull": false
-        },
-        "metadata": {
-          "name": "metadata",
-          "type": "jsonb",
-          "primaryKey": false,
-          "notNull": false,
-          "default": "'{}'::jsonb"
-        },
-        "created_at": {
-          "name": "created_at",
-          "type": "timestamp",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "now()"
         }
       },
       "indexes": {},

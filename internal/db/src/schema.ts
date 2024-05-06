@@ -5,6 +5,7 @@ import {
   pgTable,
   text,
   timestamp,
+  unique,
   uuid,
 } from 'drizzle-orm/pg-core';
 
@@ -76,16 +77,14 @@ export const licenseUsageActionEnum = pgEnum('license_log_action', [
 ]);
 
 export const licenseUsage = pgTable('License_usage', {
-  id: uuid('id').primaryKey().default(sql`gen_random_uuid()`),
+  createdAt: timestamp('created_at', { precision: 2, withTimezone: true })
+    .notNull()
+    .defaultNow(),
   licenseId: uuid('license_id')
     .notNull()
     .references(() => license.id),
   type: licenseUsageTypeEnum('type'),
   action: licenseUsageActionEnum('action'),
-  metadata: jsonb('metadata').default(sql`'{}'::jsonb`),
-  createdAt: timestamp('created_at', { withTimezone: false })
-    .notNull()
-    .defaultNow(),
 });
 
 export const licenseUsageRelations = relations(licenseUsage, ({ one }) => ({

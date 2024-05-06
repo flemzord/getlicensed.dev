@@ -11,16 +11,14 @@ EXCEPTION
 END $$;
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "License_usage" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"created_at" timestamp (2) with time zone DEFAULT now() NOT NULL,
 	"license_id" uuid NOT NULL,
 	"type" "license_log_type",
-	"action" "license_log_action",
-	"metadata" jsonb DEFAULT '{}'::jsonb,
-	"created_at" timestamp DEFAULT now() NOT NULL
+	"action" "license_log_action"
 );
 --> statement-breakpoint
 DO $$ BEGIN
- ALTER TABLE "License_usage" ADD CONSTRAINT "License_usage_license_id_License_id_fk" FOREIGN KEY ("license_id") REFERENCES "License"("id") ON DELETE no action ON UPDATE no action;
-EXCEPTION
- WHEN duplicate_object THEN null;
+  CREATE EXTENSION IF NOT EXISTS timescaledb;
 END $$;
+--> statement-breakpoint
+SELECT create_hypertable('"License_usage"', 'created_at', if_not_exists => TRUE, migrate_data => TRUE);
