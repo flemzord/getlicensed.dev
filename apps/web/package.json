@@ -37,7 +37,7 @@
     "vue": "^3.4.26",
     "vue-chartjs": "^5.3.1",
     "vue-router": "^4.3.0",
-    "zod": "^3.23.5"
+    "zod": "^3.23.6"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240419.0",
