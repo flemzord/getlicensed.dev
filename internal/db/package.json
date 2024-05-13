@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.12.11",
     "dotenv-cli": "^7.4.1",
     "drizzle-kit": "^0.20.17",
     "drizzle-orm": "^0.30.9",
