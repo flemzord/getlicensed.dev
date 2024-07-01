@@ -46,7 +46,7 @@
     "dotenv": "^16.4.5",
     "happy-dom": "^14.7.1",
     "nitro-cloudflare-dev": "^0.1.4",
-    "playwright-core": "^1.43.1",
+    "playwright-core": "^1.45.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.9.3",
     "typescript": "^5.4.5",
