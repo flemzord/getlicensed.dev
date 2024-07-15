@@ -8,6 +8,6 @@
   "keywords": [],
   "author": "Maxence Maireaux",
   "devDependencies": {
-    "mintlify": "^4.0.152"
+    "mintlify": "^4.0.185"
   }
 }
