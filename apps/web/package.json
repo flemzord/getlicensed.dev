@@ -34,7 +34,7 @@
     "nuxt-cloudflare-analytics": "^1.0.8",
     "superjson": "^2.2.1",
     "trpc-nuxt": "^0.10.21",
-    "vue": "^3.4.26",
+    "vue": "^3.4.34",
     "vue-chartjs": "^5.3.1",
     "vue-router": "^4.3.0",
     "zod": "^3.23.6"
