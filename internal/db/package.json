@@ -18,7 +18,7 @@
     "@faker-js/faker": "^8.4.1",
     "@types/node": "^20.12.7",
     "dotenv-cli": "^7.4.1",
-    "drizzle-kit": "^0.20.17",
+    "drizzle-kit": "^0.23.1",
     "drizzle-orm": "^0.30.9",
     "esbuild-register": "^3.5.0",
     "pg": "^8.11.5",
