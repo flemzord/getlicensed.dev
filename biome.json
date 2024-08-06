@@ -7,7 +7,9 @@
       ".nuxt/*",
       "dist/*",
       "worker-configuration.d.ts",
-      "public/*"
+      "public/*",
+      "apps/app/vendor/*",
+      "**/*.php"
     ]
   },
   "organizeImports": {
