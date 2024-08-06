@@ -1,1 +1,0 @@
-ALTER TABLE "License" ALTER COLUMN "expires_at" SET NOT NULL;

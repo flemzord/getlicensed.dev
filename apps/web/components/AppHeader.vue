@@ -35,16 +35,9 @@
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a
-          v-if="!loggedIn"
-          href="/auth/login"
+          href="https://app.getlicensed.dev/login"
           class="text-sm font-semibold leading-6 text-gray-900"
           >Log in <span aria-hidden="true">&rarr;</span></a
-        >
-        <a
-          v-else
-          href="/dashboard"
-          class="text-sm font-semibold leading-6 text-gray-900"
-          >Dashboard <span aria-hidden="true">&rarr;</span></a
         >
       </div>
     </nav>
@@ -89,16 +82,9 @@
             </div>
             <div class="py-6">
               <a
-                v-if="!loggedIn"
-                href="/auth/login"
+                href="https://app.getlicensed.dev/login"
                 class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >Log in</a
-              >
-              <a
-                v-else
-                href="/dashboard"
-                class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >Dashboard</a
               >
             </div>
           </div>
